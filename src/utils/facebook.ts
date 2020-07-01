@@ -31,45 +31,50 @@ const persistent_menu = [
     composer_input_disabled: false,
     call_to_actions: [
       {
-        title: 'Chức Năng',
+        title: 'chức năng',
         type: 'nested',
         call_to_actions: [
           {
-            title: 'Meow',
+            title: 'meow',
             type: 'postback',
             payload: lang.KEYWORD_CAT
           },
           {
-            title: 'Gauw',
+            title: 'cunw',
             type: 'postback',
             payload: lang.KEYWORD_DOG
           },
           {
-            title: 'Tìm Nam',
+            title: 'tìm nam',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
           },
           {
-            title: 'Tìm Nữ',
+            title: 'tìm nữ',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
           },
           {
-            title: 'Kết Thúc',
+            title: 'kết thúc',
             type: 'postback',
             payload: lang.KEYWORD_END
           }
         ]
       },
       {
-        title: 'Trợ Giúp',
+        title: 'trợ giúp',
         type: 'postback',
         payload: lang.KEYWORD_HELP
       },
       {
-        title: 'Gửi Phản Hồi',
+        title: 'gửi phản hồi',
         type: 'web_url',
         url: config.REPORT_LINK
+      },
+      {
+        title: 'tâm sự admin',
+        type: 'web_url',
+        url: config.TSAD_LINK
       }
     ]
   }
