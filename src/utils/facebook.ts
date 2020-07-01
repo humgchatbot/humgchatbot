@@ -31,50 +31,45 @@ const persistent_menu = [
     composer_input_disabled: false,
     call_to_actions: [
       {
-        title: 'Chức năng',
+        title: 'chức năng',
         type: 'nested',
         call_to_actions: [
           {
-            title: 'Tìm Nam',
-            type: 'postback',
-            payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
-          },
-          {
-            title: 'Tìm Nữ',
-            type: 'postback',
-            payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
-          },
-          {
-            title: 'Meow',
+            title: 'meow',
             type: 'postback',
             payload: lang.KEYWORD_CAT
           },
           {
-            title: 'Cunw',
+            title: 'gauw',
             type: 'postback',
             payload: lang.KEYWORD_DOG
           },
           {
-            title: 'Kết Thúc',
+            title: 'tìm nam',
+            type: 'postback',
+            payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
+          },
+          {
+            title: 'tìm nữ',
+            type: 'postback',
+            payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
+          },
+          {
+            title: 'kết thúc',
             type: 'postback',
             payload: lang.KEYWORD_END
           }
         ]
       },
       {
-        title: 'Trợ Giúp',
+        title: 'trợ giúp',
         type: 'postback',
         payload: lang.KEYWORD_HELP
       },
       {
-        title: 'Gửi Phản Hồi',
+        title: 'gửi phản hồi',
         type: 'web_url',
         url: config.REPORT_LINK
-      },
-      {
-        title: 'Tâm Sự Cùng Admin',
-        type: 'postback',
-        payload: config.TSAD_LINK
       }
     ]
   }
@@ -83,17 +78,17 @@ const persistent_menu = [
 const quick_buttons_generic: Array<SendQuickReply> = [
   {
     content_type: 'text',
-    title: 'Meow',
+    title: 'meow',
     payload: lang.KEYWORD_CAT
   },
   {
     content_type: 'text',
-    title: 'Cunw',
+    title: 'gauw',
     payload: lang.KEYWORD_DOG
   },
   {
     content_type: 'text',
-    title: 'Trợ Giúp',
+    title: 'trợ giúp',
     payload: lang.KEYWORD_HELP
   }
 ];
@@ -101,12 +96,12 @@ const quick_buttons_generic: Array<SendQuickReply> = [
 const quick_buttons_genders: Array<SendQuickReply> = [
   {
     content_type: 'text',
-    title: 'Tìm Nam',
+    title: 'tìm nam',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
   },
   {
     content_type: 'text',
-    title: 'Tìm Nữ',
+    title: 'tìm nữ',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
   }
 ];
@@ -128,7 +123,7 @@ const setPersona = async (): Promise<void> => {
       logger.logError('facebook::setPersona', 'Failed to get personas', body, true);
     } else {
       for (let i = 0; i < body.data.length; i++) {
-        if (body.data[i].name === 'Cá') {
+        if (body.data[i].name === 'Đối chat') {
           setUp = true;
           personaID = body.data[i].id;
           break;
@@ -145,7 +140,7 @@ const setPersona = async (): Promise<void> => {
   }
 
   const payload = {
-    name: 'Cá',
+    name: 'Đối chat',
     profile_picture_url: 'https://ptnkchat.github.io/assets/ptnk_logo.jpeg'
   };
 
@@ -354,10 +349,6 @@ const sendTextButtons = async (
 
   if (showReportButton) {
     buttons.push({ type: 'web_url', title: 'Gửi phản hồi', url: config.REPORT_LINK });
-  }
-
-  if (showTSADButton) {
-    buttons.push({ type: 'web_url', title: 'Tâm sự cùng Admin', url: config.TSAD_LINK });
   }
 
   let quick_replies: Array<SendQuickReply> = [];
