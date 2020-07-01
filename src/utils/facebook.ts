@@ -140,7 +140,7 @@ const setPersona = async (): Promise<void> => {
       logger.logError('facebook::setPersona', 'Failed to get personas', body, true);
     } else {
       for (let i = 0; i < body.data.length; i++) {
-        if (body.data[i].name === 'Đối chat') {
+        if (body.data[i].name === 'Cá') {
           setUp = true;
           personaID = body.data[i].id;
           break;
@@ -157,8 +157,8 @@ const setPersona = async (): Promise<void> => {
   }
 
   const payload = {
-    name: 'Đối chat',
-    profile_picture_url: 'https://ptnkchat.github.io/assets/ptnk_logo.jpeg'
+    name: 'Cá',
+    profile_picture_url: 'https://humg.github.io/assets/humgchatbot_logo.jpeg'
   };
 
   try {
