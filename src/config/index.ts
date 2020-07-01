@@ -81,7 +81,7 @@ export default {
   MAX_MESSAGE_LENGTH: parseEnvNumber('MAX_MESSAGE_LENGTH') || 2000,
 
   // App name (must be the same on Heroku)
-  APP_NAME: parseEnvString('APP_NAME') || 'ptnkchat',
+  APP_NAME: parseEnvString('APP_NAME') || 'humgchatbot',
 
   // Heroku API key
   HEROKU_API_KEY: parseEnvString('HEROKU_API_KEY') || '',
