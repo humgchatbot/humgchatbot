@@ -66,24 +66,24 @@ const persistent_menu = [
         type: 'nested',
         call_to_actions: [
           {
-            title: 'Tâm Sự Cùng Admin',
+            title: 'Tâm Sự Cùng Admin 🥰💕',
             type: 'web_url',
             url: config.TSAD_LINK
           },
           {
-            title: 'Gửi Confession',
+            title: 'Gửi Confession 😘💘',
             type: 'web_url',
             url: config.CFS_LINK
           },
           {
-            title: 'Gửi Phản Hồi',
+            title: 'Report/Gửi Phản Hồi ⛔',
             type: 'web_url',
             url: config.REPORT_LINK
           }
         ]
       },
       {
-        title: 'trợ giúp',
+        title: 'Trợ Giúp 🆘',
         type: 'postback',
         payload: lang.KEYWORD_HELP
       },
@@ -92,6 +92,11 @@ const persistent_menu = [
 ];
 
 const quick_buttons_genders: Array<SendQuickReply> = [
+  {
+    content_type: 'text',
+    title: 'Tìm Cá Bất Kì',
+    payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH
+  },
   {
     content_type: 'text',
     title: 'Tìm Nam',
@@ -362,6 +367,10 @@ const sendTextButtons = async (
 
   if (showStartButton) {
     buttons.push({ type: 'postback', title: 'Bắt đầu chat', payload: lang.KEYWORD_START });
+  }
+  
+    if (showStartButton) {
+    buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin', url: config.TSAD_LINK });
   }
 
   if (showReportButton) {
