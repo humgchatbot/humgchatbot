@@ -31,70 +31,57 @@ const persistent_menu = [
     composer_input_disabled: false,
     call_to_actions: [
       {
-        title: 'chức năng',
+        title: 'Chức Năng',
         type: 'nested',
         call_to_actions: [
           {
-            title: 'meow',
-            type: 'postback',
-            payload: lang.KEYWORD_CAT
-          },
-          {
-            title: 'cunw',
-            type: 'postback',
-            payload: lang.KEYWORD_DOG
-          },
-          {
-            title: 'tìm nam',
+            title: 'Tìm Nam',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
           },
           {
-            title: 'tìm nữ',
+            title: 'Tìm Nữ',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
           },
           {
-            title: 'kết thúc',
+            title: 'Meow',
+            type: 'postback',
+            payload: lang.KEYWORD_CAT
+          },
+          {
+            title: 'Cunw',
+            type: 'postback',
+            payload: lang.KEYWORD_DOG
+          },
+          {
+            title: 'Kết Thúc',
             type: 'postback',
             payload: lang.KEYWORD_END
           }
         ]
       },
       {
-        title: 'trợ giúp',
+        title: 'Trợ Giúp',
         type: 'postback',
         payload: lang.KEYWORD_HELP
       },
       {
-        title: 'gửi phản hồi',
-        type: 'web_url',
-        url: config.REPORT_LINK
-      },
-      {
-        title: 'tâm sự admin',
+        title: 'Tâm Sự Cùng Admin',
         type: 'web_url',
         url: config.TSAD_LINK
+      },
+      {
+        title: 'Gửi Confession',
+        type: 'web_url',
+        url: config.CFS_LINK
+      },
+      {
+        title: 'Gửi Phản Hồi',
+        type: 'web_url',
+        url: config.REPORT_LINK
       }
     ]
-  }
-];
-
-const quick_buttons_generic: Array<SendQuickReply> = [
-  {
-    content_type: 'text',
-    title: 'Meow',
-    payload: lang.KEYWORD_CAT
-  },
-  {
-    content_type: 'text',
-    title: 'Gauw',
-    payload: lang.KEYWORD_DOG
-  },
-  {
-    content_type: 'text',
-    title: 'Trợ Giúp',
-    payload: lang.KEYWORD_HELP
   }
 ];
 
@@ -110,6 +97,25 @@ const quick_buttons_genders: Array<SendQuickReply> = [
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
   }
 ];
+
+const quick_buttons_generic: Array<SendQuickReply> = [
+  {
+    content_type: 'text',
+    title: 'Meow',
+    payload: lang.KEYWORD_CAT
+  },
+  {
+    content_type: 'text',
+    title: 'Cunw',
+    payload: lang.KEYWORD_DOG
+  },
+  {
+    content_type: 'text',
+    title: 'Trợ Giúp',
+    payload: lang.KEYWORD_HELP
+  }
+];
+
 
 const setPersona = async (): Promise<void> => {
   // Check if persona is already set up
@@ -128,7 +134,7 @@ const setPersona = async (): Promise<void> => {
       logger.logError('facebook::setPersona', 'Failed to get personas', body, true);
     } else {
       for (let i = 0; i < body.data.length; i++) {
-        if (body.data[i].name === 'Cá') {
+        if (body.data[i].name === 'Đối chat') {
           setUp = true;
           personaID = body.data[i].id;
           break;
@@ -145,8 +151,8 @@ const setPersona = async (): Promise<void> => {
   }
 
   const payload = {
-    name: 'Cá',
-    profile_picture_url: 'https://humgchatbot.github.io/assets/humgchatbot.png'
+    name: 'Đối chat',
+    profile_picture_url: 'https://ptnkchat.github.io/assets/ptnk_logo.jpeg'
   };
 
   try {
@@ -342,6 +348,8 @@ const sendTextButtons = async (
   text: string,
   showStartButton: boolean,
   showReportButton: boolean,
+  showTSADButton: boolean,
+  showCFSButton: boolean,
   showGenericButton: boolean,
   showGenderButton: boolean,
   usePersona: boolean
