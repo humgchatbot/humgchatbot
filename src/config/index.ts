@@ -98,14 +98,15 @@ export default {
   POST_LOG_NAME2: parseEnvString('POST_LOG_NAME2') || '',
 
   // Link to Google Form for reporting
-  REPORT_LINK: parseEnvString('REPORT_LINK') || 'https://example.com',
+  REPORT_LINK: parseEnvString('REPORT_LINK') || '',
+  TSAD_LINK: parseEnvString('TSAD_LINK') || '',
 
   // Maximum number of people in wait room
-  MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 20,
+  MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 100,
 
   // Maximum amount of time in wait room
   // 0 for unlimited
-  MAX_WAIT_TIME_MINUTES: parseEnvNumber('MAX_WAIT_TIME_MINUTES') || 60,
+  MAX_WAIT_TIME_MINUTES: parseEnvNumber('MAX_WAIT_TIME_MINUTES') || 180,
 
   // Password to log into admin page
   ADMIN_PASSWORD: parseEnvString('ADMIN_PASSWORD') || '',
@@ -120,4 +121,3 @@ export default {
   // Project version. You don't need to set this.
   VERSION: require('../../package.json').version
 } as ConfigProps;
- 

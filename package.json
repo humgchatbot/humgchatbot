@@ -15,7 +15,7 @@
     "express",
     "mongo"
   ],
-  "author": "humgchatbot <humgchatbot@gmail.com>",
+  "author": "Luu Gia Linh",
   "license": "MIT",
   "main": "src/app.ts",
   "scripts": {
