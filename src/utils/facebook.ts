@@ -31,7 +31,7 @@ const persistent_menu = [
     composer_input_disabled: false,
     call_to_actions: [
       {
-        title: 'Chức Năng',
+        title: 'Ao Cá ',
         type: 'nested',
         call_to_actions: [
           {
@@ -62,25 +62,31 @@ const persistent_menu = [
         ]
       },
       {
-        title: 'Trợ Giúp',
-        type: 'postback',
-        payload: lang.KEYWORD_HELP
+        title: 'Chức Năng',
+        type: 'nested',
+        call_to_actions: [
+          {
+            title: 'Trợ Giúp',
+            type: 'postback',
+            payload: lang.KEYWORD_HELP
+          },
+          {
+            title: 'Tâm Sự Cùng Admin',
+            type: 'web_url',
+            url: config.TSAD_LINK
+          },
+          {
+            title: 'Gửi Confession',
+            type: 'web_url',
+            url: config.CFS_LINK
+          },
+          {
+            title: 'Gửi Phản Hồi',
+            type: 'web_url',
+            url: config.REPORT_LINK
+          }
+        ]
       },
-      {
-        title: 'Tâm Sự Cùng Admin',
-        type: 'web_url',
-        url: config.TSAD_LINK
-      },
-      {
-        title: 'Gửi Confession',
-        type: 'web_url',
-        url: config.CFS_LINK
-      },
-      {
-        title: 'Gửi Phản Hồi',
-        type: 'web_url',
-        url: config.REPORT_LINK
-      }
     ]
   }
 ];
