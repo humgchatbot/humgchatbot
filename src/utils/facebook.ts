@@ -366,19 +366,19 @@ const sendTextButtons = async (
   const buttons = [];
 
   if (showStartButton) {
-    buttons.push({ type: 'postback', title: 'Bắt đầu chat', payload: lang.KEYWORD_START });
+    buttons.push({ type: 'postback', title: 'Bắt đầu chat 🤞❤', payload: lang.KEYWORD_START });
   }
   
     if (showStartButton) {
-    buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin', url: config.TSAD_LINK });
+    buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin 🥰💕', url: config.TSAD_LINK });
   }
   
     if (showStartButton) {
-    buttons.push({ type: 'web_url', title: 'Gửi Confessions', url: config.CFS_LINK });
+    buttons.push({ type: 'web_url', title: 'Gửi Confessions 😘💘', url: config.CFS_LINK });
   }
 
   if (showReportButton) {
-    buttons.push({ type: 'web_url', title: 'Gửi phản hồi', url: config.REPORT_LINK });
+    buttons.push({ type: 'web_url', title: 'Gửi phản hồi ⛔', url: config.REPORT_LINK });
   }
 
   let quick_replies: Array<SendQuickReply> = [];
