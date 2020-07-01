@@ -31,45 +31,40 @@ const persistent_menu = [
     composer_input_disabled: false,
     call_to_actions: [
       {
-        title: 'Ao Cá ',
+        title: 'Bắt Cá Ao Làng 😘🥰',
         type: 'nested',
         call_to_actions: [
           {
-            title: 'Tìm Nam',
+            title: 'Tìm Nam 🤴',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
           },
           {
-            title: 'Tìm Nữ',
+            title: 'Tìm Nữ 👸',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
           },
           {
-            title: 'Meow',
+            title: 'Meow 🐱',
             type: 'postback',
             payload: lang.KEYWORD_CAT
           },
           {
-            title: 'Cunw',
+            title: 'Cunw 🐶',
             type: 'postback',
             payload: lang.KEYWORD_DOG
           },
           {
-            title: 'Kết Thúc',
+            title: 'Kết Thúc :(',
             type: 'postback',
             payload: lang.KEYWORD_END
           }
         ]
       },
       {
-        title: 'Chức Năng',
+        title: 'Chức Năng Kết Nối ❤',
         type: 'nested',
         call_to_actions: [
-          {
-            title: 'Trợ Giúp',
-            type: 'postback',
-            payload: lang.KEYWORD_HELP
-          },
           {
             title: 'Tâm Sự Cùng Admin',
             type: 'web_url',
@@ -86,6 +81,11 @@ const persistent_menu = [
             url: config.REPORT_LINK
           }
         ]
+      },
+      {
+        title: 'trợ giúp',
+        type: 'postback',
+        payload: lang.KEYWORD_HELP
       },
     ]
   }
