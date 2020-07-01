@@ -70,11 +70,6 @@ const persistent_menu = [
         title: 'Gửi Phản Hồi',
         type: 'web_url',
         url: config.REPORT_LINK
-      },
-      {
-        title: 'Tâm Sự Cùng Admin',
-        type: 'web_url',
-        url: config.TSAD_LINK
       }
     ]
   }
