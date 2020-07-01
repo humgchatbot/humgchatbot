@@ -301,11 +301,11 @@ const sendAttachment = async (
   usePersona: boolean
 ): Promise<void> => {
   let quick_replies: Array<SendQuickReply> = [];
-  if (showGenericButton) {
-    quick_replies = quick_replies.concat(quick_buttons_generic);
-  }
   if (showGenderButton) {
     quick_replies = quick_replies.concat(quick_buttons_genders);
+  }
+  if (showGenericButton) {
+    quick_replies = quick_replies.concat(quick_buttons_generic);
   }
 
   const message: SendMessageObject = {
@@ -315,7 +315,7 @@ const sendAttachment = async (
     }
   };
 
-  if (showGenericButton || showGenderButton) {
+  if (showGenderButton || showGenericButton) {
     message.quick_replies = quick_replies;
   }
 
@@ -348,8 +348,6 @@ const sendTextButtons = async (
   text: string,
   showStartButton: boolean,
   showReportButton: boolean,
-  showTSADButton: boolean,
-  showCFSButton: boolean,
   showGenericButton: boolean,
   showGenderButton: boolean,
   usePersona: boolean
@@ -365,16 +363,16 @@ const sendTextButtons = async (
   }
 
   let quick_replies: Array<SendQuickReply> = [];
-  if (showGenericButton) {
-    quick_replies = quick_replies.concat(quick_buttons_generic);
-  }
   if (showGenderButton) {
     quick_replies = quick_replies.concat(quick_buttons_genders);
+  }
+  if (showGenericButton) {
+    quick_replies = quick_replies.concat(quick_buttons_generic);
   }
 
   const messageData: SendMessageObject = {};
 
-  if (showGenericButton || showGenderButton) {
+  if (showGenderButton || showGenericButton) {
     messageData.quick_replies = quick_replies;
   }
 
