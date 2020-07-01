@@ -370,7 +370,7 @@ const sendTextButtons = async (
   }
   
     if (showStartButton) {
-    buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin 🥰💕', url: config.TSAD_LINK });
+    buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin 💕', url: config.TSAD_LINK });
   }
   
     if (showStartButton) {
