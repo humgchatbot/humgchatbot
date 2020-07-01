@@ -40,7 +40,7 @@ const persistent_menu = [
             payload: lang.KEYWORD_CAT
           },
           {
-            title: 'Cunw',
+            title: 'Gauw',
             type: 'postback',
             payload: lang.KEYWORD_DOG
           },
@@ -83,7 +83,7 @@ const quick_buttons_generic: Array<SendQuickReply> = [
   },
   {
     content_type: 'text',
-    title: 'Cunw',
+    title: 'Gauw',
     payload: lang.KEYWORD_DOG
   },
   {
