@@ -445,4 +445,4 @@ export default {
   sendTextButtons,
   sendSeenIndicator,
   getUserData
-};
+}; 
