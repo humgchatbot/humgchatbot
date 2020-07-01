@@ -102,14 +102,14 @@ export default {
   // Link to Google Form for reporting
   REPORT_LINK: parseEnvString('REPORT_LINK') || 'https://forms.gle/MfbSsSA4wyckbsi69',
   TSAD_LINK: parseEnvString('TSAD_LINK') || 'https://m.me/adschatbot',
-  //CFS_LINK: parseEnvString('TSAD_LINK') || 'https://forms.gle/mHWKEpP6xZFyBdUm9',
+  CFS_LINK: parseEnvString('CFS_LINK') || 'https://forms.gle/mHWKEpP6xZFyBdUm9',
 
   // Maximum number of people in wait room
-  MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 20,
+  MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 100,
 
   // Maximum amount of time in wait room
   // 0 for unlimited
-  MAX_WAIT_TIME_MINUTES: parseEnvNumber('MAX_WAIT_TIME_MINUTES') || 60,
+  MAX_WAIT_TIME_MINUTES: parseEnvNumber('MAX_WAIT_TIME_MINUTES') || 360,
 
   // Password to log into admin page
   ADMIN_PASSWORD: parseEnvString('ADMIN_PASSWORD') || '',
