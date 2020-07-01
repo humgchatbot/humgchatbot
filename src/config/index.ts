@@ -54,6 +54,7 @@ export interface ConfigProps {
   POST_LOG_NAME2: string;
   REPORT_LINK: string;
   TSAD_LINK: string;
+  CFS_LINK: string;
   MAX_PEOPLE_IN_WAITROOM: number;
   MAX_WAIT_TIME_MINUTES: number;
   ADMIN_PASSWORD: string;
@@ -91,16 +92,17 @@ export default {
   MONGO_URI: parseEnvString('MONGO_URI') || '',
 
   // Logging stuffs
-  HAS_POST_LOG: parseEnvBoolean('HAS_POST_LOG') || false,
-  POST_LOG_ID: parseEnvString('POST_LOG_ID') || '',
-  POST_LOG_P1: parseEnvString('POST_LOG_P1') || '',
-  POST_LOG_P2: parseEnvString('POST_LOG_P2') || '',
-  POST_LOG_NAME1: parseEnvString('POST_LOG_NAME1') || '',
-  POST_LOG_NAME2: parseEnvString('POST_LOG_NAME2') || '',
+  HAS_POST_LOG: parseEnvBoolean('HAS_POST_LOG') || true,
+  POST_LOG_ID: parseEnvString('POST_LOG_ID') || '1FAIpQLSfx-FxnFokRbVgm8J_l47FRdvszi4pA86MbKVLwevzB1Nu4-w',
+  POST_LOG_P1: parseEnvString('POST_LOG_P1') || '1668346942',
+  POST_LOG_P2: parseEnvString('POST_LOG_P2') || '1209118847',
+  POST_LOG_NAME1: parseEnvString('POST_LOG_NAME1') || '878469467',
+  POST_LOG_NAME2: parseEnvString('POST_LOG_NAME2') || '1772121713',
 
   // Link to Google Form for reporting
-  REPORT_LINK: parseEnvString('REPORT_LINK') || '',
-  TSAD_LINK: parseEnvString('TSAD_LINK') || '',
+  REPORT_LINK: parseEnvString('REPORT_LINK') || 'https://forms.gle/MfbSsSA4wyckbsi69',
+  TSAD_LINK: parseEnvString('TSAD_LINK') || 'https://m.me/adschatbot',
+  //CFS_LINK: parseEnvString('TSAD_LINK') || 'https://forms.gle/mHWKEpP6xZFyBdUm9',
 
   // Maximum number of people in wait room
   MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 20,
