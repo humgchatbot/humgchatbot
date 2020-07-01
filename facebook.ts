@@ -35,39 +35,39 @@ const persistent_menu = [
         type: 'nested',
         call_to_actions: [
           {
-            title: 'Tìm Nam',
-            type: 'postback',
-            payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
-          },
-          {
-            title: 'Tìm Nữ',
-            type: 'postback',
-            payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
-          },
-          {
-            title: 'Meow',
+            title: 'meow',
             type: 'postback',
             payload: lang.KEYWORD_CAT
           },
           {
-            title: 'Gauw',
+            title: 'gauw',
             type: 'postback',
             payload: lang.KEYWORD_DOG
           },
           {
-            title: 'Kết Thúc',
+            title: 'tìm nam',
+            type: 'postback',
+            payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
+          },
+          {
+            title: 'tìm nữ',
+            type: 'postback',
+            payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
+          },
+          {
+            title: 'kết thúc',
             type: 'postback',
             payload: lang.KEYWORD_END
           }
         ]
       },
       {
-        title: 'Tâm Sự Cùng Admin',
-        type: 'web_url',
-        url: config.TSAD_LINK
+        title: 'trợ giúp',
+        type: 'postback',
+        payload: lang.KEYWORD_HELP
       },
       {
-        title: 'Gửi Phản Hồi',
+        title: 'gửi phản hồi',
         type: 'web_url',
         url: config.REPORT_LINK
       }
@@ -75,37 +75,36 @@ const persistent_menu = [
   }
 ];
 
-const quick_buttons_genders: Array<SendQuickReply> = [
-  {
-    content_type: 'text',
-    title: 'Tìm Nam',
-    payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
-  },
-  {
-    content_type: 'text',
-    title: 'Tìm Nữ',
-    payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
-  }
-];
-
 const quick_buttons_generic: Array<SendQuickReply> = [
   {
     content_type: 'text',
-    title: 'Meow',
+    title: 'meow',
     payload: lang.KEYWORD_CAT
   },
   {
     content_type: 'text',
-    title: 'Gauw',
+    title: 'gauw',
     payload: lang.KEYWORD_DOG
   },
   {
     content_type: 'text',
-    title: 'Trợ Giúp',
+    title: 'trợ giúp',
     payload: lang.KEYWORD_HELP
   }
 ];
 
+const quick_buttons_genders: Array<SendQuickReply> = [
+  {
+    content_type: 'text',
+    title: 'tìm nam',
+    payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
+  },
+  {
+    content_type: 'text',
+    title: 'tìm nữ',
+    payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
+  }
+];
 
 const setPersona = async (): Promise<void> => {
   // Check if persona is already set up
