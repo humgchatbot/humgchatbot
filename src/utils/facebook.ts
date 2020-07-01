@@ -372,6 +372,10 @@ const sendTextButtons = async (
     if (showStartButton) {
     buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin', url: config.TSAD_LINK });
   }
+  
+    if (showStartButton) {
+    buttons.push({ type: 'web_url', title: 'Gửi Confessions', url: config.CFS_LINK });
+  }
 
   if (showReportButton) {
     buttons.push({ type: 'web_url', title: 'Gửi phản hồi', url: config.REPORT_LINK });
