@@ -1,8 +1,8 @@
 {
-  "name": "HUMG Chatbot",
+  "name": "humgchatbot",
   "description": "Chatible clone written in TypeScript, based on Node, Express and Mongo",
   "repository": "https://github.com/humgchatbot/humgchatbot",
   "keywords": ["chatible", "node", "express", "typescript", "mongo"],
   "success_url": "/",
-  "website": "https://m.me/HumgBotChat"
+  "website": "https://m.me/humgbotchat"
 }
