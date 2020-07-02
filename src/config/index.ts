@@ -100,9 +100,9 @@ export default {
   POST_LOG_NAME2: parseEnvString('POST_LOG_NAME2') || '',
 
   // Link to Google Form for reporting
-  REPORT_LINK: parseEnvString('REPORT_LINK') || 'https://forms.gle/MfbSsSA4wyckbsi69',
+  REPORT_LINK: parseEnvString('REPORT_LINK') || 'forms.gle/MfbSsSA4wyckbsi69',
   TSAD_LINK: parseEnvString('TSAD_LINK') || 'https://m.me/adschatbot',
-  CFS_LINK: parseEnvString('CFS_LINK') || 'https://forms.gle/mHWKEpP6xZFyBdUm9',
+  CFS_LINK: parseEnvString('CFS_LINK') || 'forms.gle/mHWKEpP6xZFyBdUm9',
 
   // Maximum number of people in wait room
   MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 100,
