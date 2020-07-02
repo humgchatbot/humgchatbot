@@ -45,13 +45,13 @@ const logPair = async (id1: string, id2: string): Promise<void> => {
   const info2 = await fb.getUserData(id2);
 
 
-  data += `&entry.${config.POST_LOG_NAME1}=` + info1.error ? 'error' : encodeURI(info1.name || 'error');
-  data += `&entry.${config.POST_LOG_NAME2}=` + info2.error ? 'error' : encodeURI(info2.name || 'error');
-
   try {
     await phin({
-      url: 'https://docs.google.com/forms/d/e/'+config.POST_LOG_ID'+/formResponse',
+      url: 'https://docs.google.com/forms/d/e/'+config.POST_LOG_ID+'/formResponse',
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
       data
     });
   } catch (err) {
