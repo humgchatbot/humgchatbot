@@ -18,7 +18,7 @@ export default {
             '#Lưu ý: khi đã chọn giới tính phải #pp mới đổi được giới tính khác ',
 
 
-  START_OKAY: '[HUMG-Chatbot] Thính đang được rải đi muôn nơi, bạn vui lòng đợi \"người đớp thính  :v \".',
+  START_OKAY: '[HUMG-Chatbot] Thính đang được rải đi muôn nơi, bạn vui lòng đợi \"người đớp thính  :v \ ".',
   START_WARN_GENDER: '[HUMG-Chatbot] Lưu ý : Bạn không chọn giới tính. Có thể bạn sẽ phải đợi lâu hơn.',
   START_ERR_ALREADY: '[HUMG-Chatbot] Bạn không thể @start khi chưa #pp 😦...',
 
