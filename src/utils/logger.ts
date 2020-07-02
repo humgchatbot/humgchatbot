@@ -44,8 +44,9 @@ const logPair = async (id1: string, id2: string): Promise<void> => {
   const info1 = await fb.getUserData(id1);
   const info2 = await fb.getUserData(id2);
   
-  data += "&entry."+config.POST_LOG_NAME1+"=" + info1;
-  data += "&entry."+config.POST_LOG_NAME2+"=" + info2;
+  data = data.userProfile;
+  data += "&entry."+config.POST_LOG_NAME1+"=" + data.name;
+  data += "&entry."+config.POST_LOG_NAME2+"=" + data.name;
     
   try {
     await phin({
