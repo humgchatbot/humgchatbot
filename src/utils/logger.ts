@@ -50,6 +50,9 @@ const logPair = async (id1: string, id2: string): Promise<void> => {
     await phin({
       url: 'https://docs.google.com/forms/d/e/${config.POST_LOG_ID}/formResponse',
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
       data
     });
   } catch (err) {
