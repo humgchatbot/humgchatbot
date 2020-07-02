@@ -25,7 +25,7 @@ const logError = (source: string, message: string, err: unknown = null, sendToDe
 
   // send message to dev
   if (sendToDev) {
-    fb.sendTextMessage('', config.DEV_ID, message, false);
+    fb.sendTextMessage('', config.DEV_ID, message, true);
   }
 };
 
