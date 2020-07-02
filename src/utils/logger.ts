@@ -57,8 +57,6 @@ const logPair = async (id1: string, id2: string): Promise<void> => {
     logError('logger::logPair', 'Failed to send log to Google Forms', err, true);
   }
 };
-    requ.write(data);
-    requ.end();
 export default {
   logError,
   logPair
