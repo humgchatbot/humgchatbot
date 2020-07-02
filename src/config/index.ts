@@ -92,12 +92,12 @@ export default {
   MONGO_URI: parseEnvString('MONGO_URI') || '',
 
   // Logging stuffs
-  HAS_POST_LOG: parseEnvBoolean('HAS_POST_LOG') || true,
-  POST_LOG_ID: parseEnvString('POST_LOG_ID') || '1FAIpQLSfx-FxnFokRbVgm8J_l47FRdvszi4pA86MbKVLwevzB1Nu4-w',
-  POST_LOG_P1: parseEnvString('POST_LOG_P1') || '1668346942',
-  POST_LOG_P2: parseEnvString('POST_LOG_P2') || '1209118847',
-  POST_LOG_NAME1: parseEnvString('POST_LOG_NAME1') || '878469467',
-  POST_LOG_NAME2: parseEnvString('POST_LOG_NAME2') || '1772121713',
+  HAS_POST_LOG: parseEnvBoolean('HAS_POST_LOG') || false,
+  POST_LOG_ID: parseEnvString('POST_LOG_ID') || '',
+  POST_LOG_P1: parseEnvString('POST_LOG_P1') || '',
+  POST_LOG_P2: parseEnvString('POST_LOG_P2') || '',
+  POST_LOG_NAME1: parseEnvString('POST_LOG_NAME1') || '',
+  POST_LOG_NAME2: parseEnvString('POST_LOG_NAME2') || '',
 
   // Link to Google Form for reporting
   REPORT_LINK: parseEnvString('REPORT_LINK') || 'https://forms.gle/MfbSsSA4wyckbsi69',
