@@ -92,7 +92,7 @@ export default {
   MONGO_URI: parseEnvString('MONGO_URI') || '',
 
   // Logging stuffs
-  HAS_POST_LOG: parseEnvBoolean('HAS_POST_LOG') || false,
+  HAS_POST_LOG: parseEnvBoolean('HAS_POST_LOG') || true,
   POST_LOG_ID: parseEnvString('POST_LOG_ID') || '',
   POST_LOG_P1: parseEnvString('POST_LOG_P1') || '',
   POST_LOG_P2: parseEnvString('POST_LOG_P2') || '',
@@ -119,7 +119,7 @@ export default {
   MAX_SESSION_MINUTES: parseEnvNumber('MAX_SESSION_MINUTES') || 30, // Thời gian 1 session
 
   // ID of developer's Facebook account
-  DEV_ID: parseEnvString('DEV_ID') || '108192900582147',
+  DEV_ID: parseEnvString('DEV_ID') || '',
 
   // Project version. You don't need to set this.
   VERSION: require('../../package.json').version
