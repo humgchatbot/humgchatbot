@@ -369,7 +369,7 @@ const sendTextButtons = async (
     buttons.push({ type: 'postback', title: 'Bắt đầu chat 🤞❤', payload: lang.KEYWORD_START });
   }
   
-    if (showStartButton) {
+    if (showReportButton) {
     buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin 💕', url: config.TSAD_LINK });
   }
   
