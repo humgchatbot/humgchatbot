@@ -358,8 +358,6 @@ const sendTextButtons = async (
   receiver: string,
   text: string,
   showStartButton: boolean,
-  showTSADButton: boolean,
-  showCFSButton: boolean,
   showReportButton: boolean,
   showGenericButton: boolean,
   showGenderButton: boolean,
@@ -371,13 +369,13 @@ const sendTextButtons = async (
     buttons.push({ type: 'postback', title: 'Bắt đầu chat 🤞❤', payload: lang.KEYWORD_START });
   }
   
-    if (showTSADButton) {
-    buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin 💕', url: config.TSAD_LINK });
-  }
+    //if (showStartButton) {
+    //buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin 💕', url: config.TSAD_LINK });
+  //}
   
-    if (showCFSButton) {
-    buttons.push({ type: 'web_url', title: 'Gửi Confessions 😘💘', url: config.CFS_LINK });
-  }
+    //if (showStartButton) {
+    //buttons.push({ type: 'web_url', title: 'Gửi Confessions 😘💘', url: config.CFS_LINK });
+  //}
 
   if (showReportButton) {
     buttons.push({ type: 'web_url', title: 'Gửi phản hồi ⛔', url: config.REPORT_LINK });
@@ -397,7 +395,7 @@ const sendTextButtons = async (
     messageData.quick_replies = quick_replies;
   }
 
-  if (showStartButton || showTSADButton || showCFSButton || showReportButton) {
+  if (showStartButton || showReportButton) {
     messageData.attachment = {
       type: 'template',
       payload: {
