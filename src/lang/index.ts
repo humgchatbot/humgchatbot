@@ -18,7 +18,7 @@ export default {
             '#Lưu ý: khi đã chọn giới tính phải #pp mới đổi được giới tính khác ',
 
 
-  START_OKAY: '[HUMG-Chatbot] Thính đang được rải đi muôn nơi, bạn vui lòng đợi \"người đớp thính  :v \ ".',
+  START_OKAY: '[Hãng hàng không HUMG Chatbot xin thông báo] Thính của quý khách đang nằm trên chuyến bay mang nhãn hiệu MH370 =))) Đang được rải đi khắp muôn nơi. Quý khách vui lòng chờ trong giây lát, thính sắp hạ cánh an toàn 🙆‍♂️❤',
   START_WARN_GENDER: '[HUMG-Chatbot] Lưu ý : Bạn không chọn giới tính. Có thể bạn sẽ phải đợi lâu hơn.',
   START_ERR_ALREADY: '[HUMG-Chatbot] Bạn không thể @start khi chưa #pp 😦...',
 
