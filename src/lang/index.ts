@@ -25,7 +25,7 @@ export default {
   WAITING: '[HUMG-Chatbot] Thính vẫn đang tiếp tục rải để tìm người phù hợp với bạn nhất =)) ... *: Nếu bạn muốn đổi giới tính, gửi #pp sau đó chọn giới tính mới.',
   CONNECTED: '[HUMG-Chatbot] Cá đớp thính! \nGiật cần đi bạn....\nNếu muốn kết thúc, hãy gửi #pp\nChúc 2 bạn nói chuyện vui vẻ <3.',
 
-  END_CHAT: '[HUMG-Chatbot] Đã ngưng thả thính !\nGửi @start hoặc bấm vào nút để thả thính tìm cá nhé <3.',
+  END_CHAT: '[Hãng hàng không Quốc Tế HUMG Chatbot] Xin thông báo ! Hiện tại thính của quý khách đã hết lượt bay. Xin quý khách vui lòng nhấn "Bắt đầu" hoặc @start để chuyến bay được tiếp tục ❤',
   END_CHAT_PARTNER: '[HUMG-Chatbot] Bạn ý đã ngắt kết nối :(\nGửi @start hoặc bấm vào nút để tìm cá <3.',
   END_CHAT_FORCE: '[HUMG-Chatbot] Hiện tại không có cá nào đang online cả. Bạn hãy thử lại sau nhé :(',
 
