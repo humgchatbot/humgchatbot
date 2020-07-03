@@ -39,8 +39,8 @@ export default {
   GENDER_WRITE_OK: '[HUMG-Chatbot] Bạn đã chọn giới tính mong muốn tìm được là: ',
   GENDER_WRITE_WARN: '\n\nLưu ý: Tùy chọn này chỉ có tác dụng với PHẦN LỚN các cuộc thả thính.\n🔄Nếu muốn chuyển giới tính thả thính mời bạn gửi #pp rồi tiếp tục.<3',
   GENDER_ARR_UNKNOWN: 'Cả Hai',
-  GENDER_ARR_MALE: 'Nam🙆‍♂️',
-  GENDER_ARR_FEMALE: 'Nữ🙆‍♀️',
+  GENDER_ARR_MALE: 'Nam 🙆‍♂️',
+  GENDER_ARR_FEMALE: 'Nữ 🙆‍♀️',
 
   KEYWORD_START: '@start',
   KEYWORD_END: '#pp',
