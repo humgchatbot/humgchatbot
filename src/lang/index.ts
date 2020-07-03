@@ -26,7 +26,7 @@ export default {
   CONNECTED: '[Hãng hàng không HUMG Chatbot] Xin thông báo, thính của quý khách đã hạ cánh tại sân bay mang nhãn hiệu ID : ',
   //CONNECTED: '[HUMG-Chatbot] Cá đớp thính! \nGiật cần đi bạn....\nNếu muốn kết thúc, hãy gửi #pp\nChúc 2 bạn nói chuyện vui vẻ <3.',
   //CONNECT_ID: '[HUMG-Chatbot] ID của cá là : ',
-  CONNECT_NOTE: 'Hãy nhớ ID trên vì có thể bạn sẽ cần liên hệ với Admin để có thể lấy Infor, Report hoặc mục đích nào đó.❤ \nChú ý: ID trên k phải là ID của Facebook mà là ID của riêng HUMG Chatbot để dùng khi cần.😆',
+  CONNECT_NOTE: 'Hãy nhớ ID trên vì có thể bạn sẽ cần liên hệ với Admin để có thể lấy Infor, Report hoặc mục đích nào đó của "Cá".❤ \nChú ý: ID trên k phải là ID của Facebook mà là ID của riêng HUMG Chatbot để dùng khi cần.😆',
 
   END_CHAT: '[Hãng hàng không Quốc Tế HUMG Chatbot] Xin thông báo ! Hiện tại thính của quý khách đã hết lượt bay. Xin quý khách vui lòng nhấn "Bắt đầu" hoặc @start để chuyến bay được tiếp tục ❤',
   END_CHAT_PARTNER: '[HUMG-Chatbot] Bạn ý đã ngắt kết nối :(\nGửi @start hoặc bấm vào nút để tìm cá <3.',
