@@ -24,7 +24,7 @@ export default {
 
   WAITING: '[HUMG Chatbot] Thính vẫn đang tiếp tục rải để tìm người phù hợp với bạn nhất =)) ... *: Nếu bạn muốn đổi giới tính, gửi #pp sau đó chọn giới tính mới.',
   CONNECTED: '[Hãng hàng không HUMG Chatbot]\n🆗Xin thông báo, thính của quý khách đã Hạ Cánh tại sân bay mang nhãn hiệu ID ✅:➡ ',
-  CONNECTED_WARN: ' ⬅\nChúc quý khách hợp tác vui vẻ <3 ';
+  CONNECTED_WARN: ' ⬅\nChúc quý khách hợp tác vui vẻ <3 ',
   //CONNECTED: '[HUMG Chatbot] Cá đớp thính! \nGiật cần đi bạn....\nNếu muốn kết thúc, hãy gửi #pp\nChúc 2 bạn nói chuyện vui vẻ <3.',
   //CONNECT_ID: '[HUMG Chatbot] ID của cá là : ',
   CONNECT_NOTE: 'Hãy nhớ ID trên vì có thể bạn sẽ cần liên hệ với Admin để có thể lấy Infor, Report hoặc mục đích nào đó của "Cá".❤ \nChú ý: ID trên k phải là ID của Facebook mà là ID của riêng HUMG Chatbot để dùng khi cần.😆',
