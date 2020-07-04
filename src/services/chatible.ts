@@ -109,8 +109,12 @@ const findPair = async (id: string, myGender: GenderEnum): Promise<void> => {
     if (
       isPreferredGender ||
       waitRoomList.length > config.MAX_PEOPLE_IN_WAITROOM ||
-      ((myGender === GenderEnum.UNKNOWN || targetGender === GenderEnum.UNKNOWN) && Math.random() > 0.8)
-    ) {
+      ((myGender === GenderEnum.UNKNOWN || targetGender === GenderEnum.UNKNOWN) && Math.random() > 0.9)
+    )
+        ((myGender === GenderEnum.MALE || targetGender === GenderEnum.MALE) && Math.random() > 0.9)
+    )
+        ((myGender === GenderEnum.FEMALE || targetGender === GenderEnum.FEMALE) && Math.random() > 0.9)
+    ){
       await pairPeople(id, target, myGender, targetGender);
       return;
     }
