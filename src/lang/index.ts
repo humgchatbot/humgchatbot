@@ -23,16 +23,16 @@ export default {
   START_ERR_ALREADY: '[HUMG Chatbot] Bạn không thể @start khi chưa #pp 😦...',
 
   WAITING: '[HUMG Chatbot] Thính vẫn đang tiếp tục rải để tìm người phù hợp với bạn nhất =)) ... *: Nếu bạn muốn đổi giới tính, gửi #pp sau đó chọn giới tính mới.',
-  CONNECTED: '[Hãng hàng không HUMG Chatbot]\n🆗Xin thông báo, thính của quý khách đã Hạ Cánh tại sân bay mang nhãn hiệu ID ✅:➡ ',
-  CONNECTED_WARN: ' ⬅\nChúc quý khách hợp tác vui vẻ <3 ',
+  CONNECTED: '[Hãng hàng không HUMG Chatbot]\n🆗Xin thông báo, thính của quý khách đã Hạ Cánh tại sân bay mang nhãn hiệu ID ✅: ',
+  CONNECTED_WARN: '\nChúc quý khách hợp tác vui vẻ <3 ',
   //CONNECTED: '[HUMG Chatbot] Cá đớp thính! \nGiật cần đi bạn....\nNếu muốn kết thúc, hãy gửi #pp\nChúc 2 bạn nói chuyện vui vẻ <3.',
   //CONNECT_ID: '[HUMG Chatbot] ID của cá là : ',
   CONNECT_NOTE: 'Hãy nhớ ID trên vì có thể bạn sẽ cần liên hệ với Admin để có thể lấy Infor, Report hoặc mục đích nào đó của "Cá".❤ \nChú ý: ID trên k phải là ID của Facebook mà là ID của riêng HUMG Chatbot để dùng khi cần.😆',
 
   END_CHAT: '[Hãng hàng không Quốc Tế HUMG Chatbot] Xin thông báo ! Hiện tại thính của quý khách đã hết lượt bay tại nhãn hiệu ID ✅:➡  ',
   END_CHAT_WARN: ' ⬅\nXin quý khách vui lòng nhấn "Bắt đầu" hoặc @start để chuyến bay được tiếp tục ❤',
-  END_CHAT_PARTNER: '[HUMG Chatbot] Bạn ý đã ngắt kết nối :(\nID của Bạn ý là ✅:➡ ',
-  END_CHAT_PARTNER_WARN: ' ⬅\nGửi @start hoặc bấm vào nút để tìm cá <3.',
+  END_CHAT_PARTNER: '[HUMG Chatbot] Bạn ý đã ngắt kết nối :(\nID của Bạn ý là ✅: ',
+  END_CHAT_PARTNER_WARN: '\nGửi @start hoặc bấm vào nút để tìm cá <3.',
   END_CHAT_FORCE: '[HUMG Chatbot] Hiện tại không có cá nào đang online cả. Bạn hãy thử lại sau nhé :(',
 
   ERR_ATTACHMENT: '[HUMG Chatbot] Lỗi: Humgchatbot chưa hỗ trợ gửi dạng dữ liệu này',
@@ -41,7 +41,7 @@ export default {
   GENDER_ERR: '[HUMG Chatbot]⚠Lỗi: Giới tính nhập vào không hợp lệ!\n\nẤn trợ giúp (hoặc gửi #trogiup) để xem thêm.',
   GENDER_WRITE_OK: '[HUMG Chatbot] Bạn đã chọn giới tính mong muốn tìm được là: ',
   GENDER_WRITE_WARN: '\n\nLưu ý: Tùy chọn này chỉ có tác dụng với PHẦN LỚN các cuộc thả thính.\n🔄Nếu muốn chuyển giới tính thả thính mời bạn gửi #pp rồi tiếp tục.<3',
-  GENDER_ARR_UNKNOWN: 'Cả Hai',
+  GENDER_ARR_UNKNOWN: 'Nam Hoặc Nữ',
   GENDER_ARR_MALE: 'Nam 🙆‍♂️',
   GENDER_ARR_FEMALE: 'Nữ 🙆‍♀️',
 
