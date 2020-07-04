@@ -105,7 +105,7 @@ export default {
   CFS_LINK: parseEnvString('CFS_LINK') || 'docs.google.com/forms/d/e/1FAIpQLScTbMFkbadN3t5y6OHh1IIZ4luqrswqqZOJ3A2YR0JyWnSRWg/viewform?usp=sf_link ',
 
   // Maximum number of people in wait room
-  MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 100,
+  MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 2,
 
   // Maximum amount of time in wait room
   // 0 for unlimited
