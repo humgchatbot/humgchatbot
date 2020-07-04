@@ -132,8 +132,8 @@ const findPair = async (id: string, myGender: GenderEnum): Promise<void> => {
  */
 const processEndChat = async (id1: string, id2: string): Promise<void> => {
   await db.removeFromChatRoom(id1); // or await db.removeFromChatRoom(id2);
-  await fb.sendTextButtons(id1, lang.END_CHAT, true, true, true, true, false);
-  await fb.sendTextButtons(id2, lang.END_CHAT_PARTNER, true, true, true, true, false);
+  await fb.sendTextButtons(id1, lang.END_CHAT + id2 + END_CHAT_WARN, true, true, true, true, false);
+  await fb.sendTextButtons(id2, lang.END_CHAT_PARTNER + id1 + END_CHAT_PARTNER_WARN, true, true, true, true, false);
 };
 
 /**
