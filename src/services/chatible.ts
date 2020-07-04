@@ -72,9 +72,9 @@ const pairPeople = async (id1: string, id2: string, gender1: GenderEnum, gender2
   await db.writeToChatRoom(id1, id2, gender1, gender2);
   await db.updateLastPerson(id1, id2);
   await db.updateLastPerson(id2, id1);
-  await fb.sendTextMessage('', id1, lang.CONNECTED+id2+lang.CONNECTED_WARN, false);
+  await fb.sendTextMessage('', id1, lang.CONNECTED + id2 + lang.CONNECTED_WARN, false);
   await fb.sendTextMessage('',id1,lang.CONNECT_NOTE, false);
-  await fb.sendTextMessage('', id2, lang.CONNECTED+id1+lang.CONNECTED_WARN, false);
+  await fb.sendTextMessage('', id2, lang.CONNECTED + id1 + lang.CONNECTED_WARN, false);
   await fb.sendTextMessage('',id2, lang.CONNECT_NOTE, false);
   await logger.logPair(id1, id2);
 };
@@ -109,7 +109,7 @@ const findPair = async (id: string, myGender: GenderEnum): Promise<void> => {
     if (
       isPreferredGender ||
       waitRoomList.length > config.MAX_PEOPLE_IN_WAITROOM ||
-      ((myGender === GenderEnum.UNKNOWN || targetGender === GenderEnum.UNKNOWN) && Math.random() > 0.4)
+      ((myGender === GenderEnum.UNKNOWN || targetGender === GenderEnum.UNKNOWN) && Math.random() > 0.3)
     ){
       await pairPeople(id, target, myGender, targetGender);
       return;
