@@ -8,6 +8,7 @@ import pidusage from 'pidusage';
 import db from '../db';
 import lang from '../lang';
 import fb from '../utils/facebook';
+import logger from '../utils/logger';
 import GenderEnum from '../enums/GenderEnum';
 import { ChatRoomEntry, WaitRoomEntry, GenderEntry, LastPersonEntry } from '../interfaces/DatabaseEntry';
 import { AdminReplyProps } from '../interfaces/AdminReplyProps';
