@@ -2,33 +2,34 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-#### Chatible clone written in TypeScript, based on Node, Express and Mongo
+#### Chatible được viết bằng TypeScript, dựa trên Node, Express và Mongo
 
 Demo: https://m.me/humgbotchat
 
-## Basic instruction
+## Hướng dẫn
 
-- Deploy to Heroku using the deploy button.
-- Create a cluster on MongoDB Atlas. Whitelist IP addresses.
-- Create an app on Facebook. Install Webhook. Get app secret and tokens.
-- Set Heroku's `Config Vars`. Check [here](src/config/index.ts) to know which variables you need to set.
+- Deploy đến Heroku bằng cách sử dụng nút deploy .
+- Tạo một cụm trên MongoDB Atlas. Địa chỉ IP danh sách trắng.
+- Tạo một ứng dụng trên Facebook. Cài đặt Webhook. Tạo app secret and tokens.
+- Đặt `Config Vars` của  Heroku's. Kiểm tra [Tại đây](src/config/index.ts) để biết những biến nào bạn cần đặt.
 - Enjoy!
 
-## Features
+## Tính năng đặc trưng
 
 - Admin dashboard ([code](https://github.com/humgchatbot/humgchatbot.github.io))
-- Pair by gender (e.g. male with female)
-- Send cute dog/cat pictures
-- Customizable message templates
-- Cache database in memory to increase performance
-- Developed with performance in mind
+- Ghép cặp theo giới tính (ví dụ: nam với nữ)
+- Gửi hình ảnh chó / mèo dễ thương.
+- Mẫu tin nhắn có thể tùy chỉnh.
+- Cơ sở dữ liệu bộ nhớ cache trong bộ nhớ để tăng hiệu suất.
+- Phát triển với hiệu suất trong tâm trí.
 
-## Planned features
+## Tính năng theo kế hoạch
 
-- Allow editing profile via Messenger Webview
-- Limiting rate of requests sent out to avoid being converted to [high-MPS](https://developers.facebook.com/docs/messenger-platform/send-messages/high-mps) page
+- Cho phép chỉnh sửa hồ sơ qua Messenger Webview
+- Giới hạn tỷ lệ yêu cầu được gửi đi để tránh bị chuyển đổi sang trang [MPS Cao](https://developers.facebook.com/docs/messenger-platform/send-messages/high-mps) page
 
-## License
+## Giấy phép
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Dự án này được cấp phép theo Giấy phép MIT - xem tệp [LICENSE.md](LICENSE.md) để biết chi tiết
+
 
