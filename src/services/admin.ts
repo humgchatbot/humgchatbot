@@ -137,9 +137,9 @@ const forceMatch = async (
 if (partner1 === null && partner2 === null) {
     await db.writeToChatRoom(id1, id2, gender1, gender2);
     await fb.sendTextMessage('', id1, lang.CONNECTED + id2 + lang.CONNECTED_WARN, false);
-    await fb.sendTextMessage('',id1,lang.CONNECT_NOTE, false);
+    await fb.sendTextMessage('', id1, lang.CONNECT_NOTE, false);
     await fb.sendTextMessage('', id2, lang.CONNECTED + id1 + lang.CONNECTED_WARN, false);
-    await fb.sendTextMessage('',id2, lang.CONNECT_NOTE, false);
+    await fb.sendTextMessage('', id2, lang.CONNECT_NOTE, false);
     await logger.logPair(id1, id2);
   }
   return { success: true, error: false };
