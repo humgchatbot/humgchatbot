@@ -154,7 +154,9 @@ const forceRemove = async (id: string): Promise<AdminReplyProps> => {
   const partner = await db.findPartnerChatRoom(id);
   if (partner) {
     await fb.sendTextButtons(id, lang.END_CHAT_PARTNER, true, true, true, true, false);
+    await fb.sendTextButtons(id, lang.END_CHAT_WARN + partner, true, true, true, true, false);
     await fb.sendTextButtons(partner, lang.END_CHAT_PARTNER, true, true, true, true, false);
+    await fb.sendTextButtons(partner, lang.END_CHAT_WARN + id , true, true, true, true, false);
   } else {
     await fb.sendTextButtons(id, lang.END_CHAT_FORCE, true, false, true, true, false);
   }
