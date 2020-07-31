@@ -20,10 +20,11 @@ export default {
 
   START_OKAY: '[Hãng hàng không HUMG Chatbot xin thông báo] Thính của quý khách đang nằm trên chuyến bay mang nhãn hiệu MH370 =))) Đang được rải đi khắp muôn nơi. Quý khách vui lòng chờ trong giây lát, thính sắp hạ cánh an toàn 🙆‍♂️❤',
   START_WARN_GENDER: '[HUMG Chatbot] Lưu ý : Bạn không chọn giới tính. Có thể bạn sẽ phải đợi lâu hơn.',
-  START_ERR_ALREADY: '[HUMG Chatbot] Bạn không thể @start khi chưa #pp 😦...',
+  START_ERR_ALREADY: '[HUMG Chatbot] Bạn không thể Bắt Đầu (@start) khi chưa Kết Thúc (#pp) 😦...',
   START_ERR_ALREADY_GENDERBOY: '[HUMG Chatbot] Bạn vẫn đang kết nối . Không thể "🤴 Tìm Nam" khi chưa #pp 😦..Hãy gửi #pp hoặc chọn Menu "💔 Kết Thúc" dể tiếp tục...',
   START_ERR_ALREADY_GENDERGIRL: '[HUMG Chatbot] Bạn vẫn đang kết nối . Không thể "👸 Tìm Nữ" khi chưa #pp 😦..Hãy gửi #pp hoặc chọn Menu "💔 Kết Thúc" dể tiếp tục...',
-
+  START_ERR_ALREADY_BOTH: '[HUMG Chatbot] Bạn vẫn đang kết nối . Không thể "Tìm Cá Bất Kì" khi chưa #pp 😦..Hãy gửi #pp hoặc chọn Menu "💔 Kết Thúc" dể tiếp tục...',
+  
   WAITING: '[HUMG Chatbot] Thính vẫn đang tiếp tục rải để tìm người phù hợp với bạn nhất =)) ... *: Nếu bạn muốn đổi giới tính, gửi #pp sau đó chọn giới tính mới.',
   CONNECTED: '[Hãng hàng không HUMG Chatbot]\n🆗Xin thông báo, thính của quý khách đã Hạ Cánh tại sân bay mang nhãn hiệu ID ✅: ',
   CONNECTED_WARN: '\nChúc quý khách hợp tác vui vẻ <3 ',
