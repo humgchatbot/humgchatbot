@@ -31,59 +31,64 @@ const persistent_menu = [
     composer_input_disabled: false,
     call_to_actions: [
       {
-        title: 'Bắt Cá Ao Làng 😘🥰',
+        title: '💟Bắt Cá Ao Làng 😘🥰',
         type: 'nested',
         call_to_actions: [
           {
-            title: 'Tìm Nam 🤴',
+            title: '🤴Tìm Nam',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
           },
           {
-            title: 'Tìm Nữ 👸',
+            title: '👸Tìm Nữ',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
           },
           {
-            title: 'Meow 🐱',
+            title: '🐱Xem ảnh Mèo',
             type: 'postback',
             payload: lang.KEYWORD_CAT
           },
           {
-            title: 'Cunw 🐶',
+            title: '🐶Xem ảnh Cún',
             type: 'postback',
             payload: lang.KEYWORD_DOG
           },
           {
-            title: 'Kết Thúc :(',
+            title: '💔Kết Thúc',
             type: 'postback',
             payload: lang.KEYWORD_END
           }
         ]
       },
       {
-        title: 'Chức Năng Kết Nối ❤',
+        title: '🎲Chức Năng Kết Nối ❤',
         type: 'nested',
         call_to_actions: [
+          //{
+          //  title: '📝Thông Tin Của Bạn',
+          //  type: 'postback',
+          //  payload: lang.KEYWORD_GETINFO
+         // },
           {
-            title: 'Tâm Sự Cùng Admin 🥰💕',
+            title: '💝Tâm Sự Cùng Admin 🥰💕',
             type: 'web_url',
             url: config.TSAD_LINK
           },
           {
-            title: 'Gửi Confession 😘💘',
+            title: '💌Gửi Confession 😘💘',
             type: 'web_url',
             url: config.CFS_LINK
           },
           {
-            title: 'Report/Gửi Phản Hồi ⛔',
+            title: '⛔Report/Gửi Phản Hồi',
             type: 'web_url',
             url: config.REPORT_LINK
           }
         ]
       },
       {
-        title: 'Trợ Giúp 🆘',
+        title: '🆘Trợ Giúp',
         type: 'postback',
         payload: lang.KEYWORD_HELP
       },
