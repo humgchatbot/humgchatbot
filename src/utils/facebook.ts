@@ -31,40 +31,46 @@ const persistent_menu = [
     composer_input_disabled: false,
     call_to_actions: [
       {
-        title: '💟 Bắt Cá Ao Làng 😘🥰',
+        title: '💟 Hồ Câu Cá 🐟🥰',
         type: 'nested',
         call_to_actions: [
-        //  {
-        //    title: '💕 Bắt đầu chat 🤞❤',
-        //    type: 'postback',
-        //    payload: lang.KEYWORD_START
-        //  },
           {
-            title: '🤴 Tìm Nam',
+            title: '💕 Thả Câu 🤞❤',
+            type: 'postback',
+            payload: lang.KEYWORD_START
+          },
+          {
+            title: '🤴 Tìm Cá Nam',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
           },
           {
-            title: '👸 Tìm Nữ',
+            title: '👸 Tìm Cá Nữ',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
-          },
-          {
-            title: '🐱 Gửi ảnh Mèo',
-            type: 'postback',
-            payload: lang.KEYWORD_CAT
-          },
-          {
-            title: '🐶 Gửi ảnh Cún',
-            type: 'postback',
-            payload: lang.KEYWORD_DOG
           },
           {
             title: '💔 Kết Thúc',
             type: 'postback',
             payload: lang.KEYWORD_END
-          }
-        ]
+          },
+            {
+          title: '📑 Tính Năng 💓',
+           type: 'nested',
+          call_to_actions: [
+           {
+              title: '🐱 Gửi ảnh Mèo',
+              type: 'postback',
+              payload: lang.KEYWORD_CAT
+            },
+            {
+             title: '🐶 Gửi ảnh Cún',
+             type: 'postback',
+              payload: lang.KEYWORD_DOG
+            },
+            ]
+            },
+       ]
       },
       {
         title: '🎲 Chức Năng Kết Nối ❤',
@@ -86,14 +92,14 @@ const persistent_menu = [
             url: config.CFS_LINK
           },
           {
-            title: '⛔ Report/Gửi Phản Hồi',
+            title: '⚠ Report/Gửi Phản Hồi',
             type: 'web_url',
             url: config.REPORT_LINK
           }
         ]
       },
       {
-        title: '🆘 Trợ Giúp',
+        title: '💡 Trợ Giúp 🆘',
         type: 'postback',
         payload: lang.KEYWORD_HELP
       },
@@ -104,17 +110,17 @@ const persistent_menu = [
 const quick_buttons_genders: Array<SendQuickReply> = [
   {
     content_type: 'text',
-    title: 'Tìm Cá Bất Kì',
+    title: '💞Tìm Cá Bất Kì',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH
   },
   {
     content_type: 'text',
-    title: 'Tìm Nam',
+    title: '🤴Tìm Cá Nam',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
   },
   {
     content_type: 'text',
-    title: 'Tìm Nữ',
+    title: '👸Tìm Cá Nữ',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
   }
 ];
@@ -122,17 +128,17 @@ const quick_buttons_genders: Array<SendQuickReply> = [
 const quick_buttons_generic: Array<SendQuickReply> = [
   {
     content_type: 'text',
-    title: 'Xem ảnh Mèo',
+    title: '😺Gưi ảnh Mèo',
     payload: lang.KEYWORD_CAT
   },
   {
     content_type: 'text',
-    title: 'Xem ảnh Cún',
+    title: '🐶Gửi ảnh Cún',
     payload: lang.KEYWORD_DOG
   },
   {
     content_type: 'text',
-    title: 'Trợ Giúp',
+    title: '💡Trợ Giúp🆘',
     payload: lang.KEYWORD_HELP
   }
 ];
@@ -376,7 +382,7 @@ const sendTextButtons = async (
   const buttons = [];
 
   if (showStartButton) {
-    buttons.push({ type: 'postback', title: 'Bắt đầu chat 🤞❤', payload: lang.KEYWORD_START });
+    buttons.push({ type: 'postback', title: '💌 Bắt đầu chat 🤞❤', payload: lang.KEYWORD_START });
   }
   
     //if (showStartButton) {
@@ -388,7 +394,7 @@ const sendTextButtons = async (
   //}
 
   if (showReportButton) {
-    buttons.push({ type: 'web_url', title: 'Gửi phản hồi ⛔', url: config.REPORT_LINK });
+    buttons.push({ type: 'web_url', title: '⚠ Gửi phản hồi ⛔', url: config.REPORT_LINK });
   }
 
   let quick_replies: Array<SendQuickReply> = [];
