@@ -54,6 +54,13 @@ export default {
   KEYWORD_HELP: '#trogiup',
   KEYWORD_CAT: '#meow',
   KEYWORD_DOG: '#cunw',
+  KEYWORD_GETINFO: 'getinfo',
+  GETINFO_NAME: '\nHọ tên: ',
+  GETINFO_GENDER: '\nGiới tính: ',
+  GETINFO_ID: 'ID của bạn là:\n ',
+  GETINFO_STATUS_CONNECT: '\nTrạng thái:🆗Đã kết nối.',
+  GETINFO_STATUS_DISCONNECT: '\nTrạng thái:❌Chưa kết nối.',
+  GETINFO_STATUS_WAIT: '\nTrạng thái:💱Đang ở phòng chờ.',
 
   ERR_FAKE_MSG: '[HUMG Chatbot] Lỗi: Bạn không được giả mạo tin nhắn của bot!',
   ERR_DATABASE: '[HUMG Chatbot] Lỗi: Không thể kết nối với database. Hãy báo cho Admin!',
