@@ -12,9 +12,9 @@ export default {
             '- #meow: Gửi ảnh mèo 🐹\n' +
             '- #cunw: Gửi ảnh cún 🐶 \n' +
             'Các lệnh có thể dùng khi đang không chat:\n' +
-            '- #tim nu: Tìm cá nữ \n' +
-            '- #tim nam: Tìm cá nam \n' +
-            '- #tim namnu: Tìm cá giới tính bất kì thả thính\n' +
+            '- #timnu: Tìm cá nữ \n' +
+            '- #timnam: Tìm cá nam \n' +
+            '- #timnamnu: Tìm cá giới tính bất kì thả thính\n' +
             'Lưu ý: khi đã chọn giới tính phải #pp mới đổi được giới tính khác ',
 
 
@@ -47,7 +47,7 @@ export default {
 
   KEYWORD_START: '@start',
   KEYWORD_END: '#pp',
-  KEYWORD_GENDER: 'tim',
+  KEYWORD_GENDER: '#tim',
   KEYWORD_GENDER_MALE: 'nam',
   KEYWORD_GENDER_FEMALE: 'nu',
   KEYWORD_GENDER_BOTH: 'namnu',
