@@ -50,12 +50,12 @@ const persistent_menu = [
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
           },
           {
-            title: '🐱 Xem ảnh Mèo',
+            title: '🐱 Gửi ảnh Mèo',
             type: 'postback',
             payload: lang.KEYWORD_CAT
           },
           {
-            title: '🐶 Xem ảnh Cún',
+            title: '🐶 Gửi ảnh Cún',
             type: 'postback',
             payload: lang.KEYWORD_DOG
           },
