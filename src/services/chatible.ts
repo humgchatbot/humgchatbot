@@ -274,7 +274,7 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
       await gifts.sendDogPic(sender, null);
     //} else if (!event.read) {
     } else if (command === lang.KEYWORD_GETINFO ) {
-      await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_STATUS_DISCONNECT , true, false, true, true, false);
+      await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_STATUS_DISCONNECT , false, false, false, false, false);
     }else if (!event.read) {
       await fb.sendTextButtons(sender, lang.WAITING, false, false, true, false, false);
     }
