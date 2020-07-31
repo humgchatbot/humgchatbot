@@ -280,6 +280,14 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
     } else if (command === lang.KEYWORD_DOG) {
       await gifts.sendDogPic(sender, null);
     //} else if (!event.read) {
+    } else if (command === lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE ) {
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_GENDERBOY , false, false, false, false, false);
+    } else if (command === lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE ) {
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_GENDERGIRL , false, false, false, false, false);
+    } else if (command === lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH ) {
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_BOTH , false, false, false, false, false);
+    } else if (command === lang.KEYWORD_START ) {
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY , false, false, false, false, false);
     } else if (command === lang.KEYWORD_GETINFO ) {
       await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_STATUS_DISCONNECT , false, false, false, false, false);
     }else if (!event.read) {
@@ -299,6 +307,14 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
     } else if (command === lang.KEYWORD_DOG) {
       await forwardMessage(sender, sender2, event.message);
       await gifts.sendDogPic(sender, sender2);
+    } else if (command === lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE ) {
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_GENDERBOY , false, false, false, false, false);
+    } else if (command === lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE ) {
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_GENDERGIRL , false, false, false, false, false);
+    } else if (command === lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH ) {
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_BOTH , false, false, false, false, false);
+    } else if (command === lang.KEYWORD_START ) {
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY , false, false, false, false, false);
     } else if (command === lang.KEYWORD_GETINFO ) {
       await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_STATUS_CONNECT + lang.GETINFO_ID2 + sender2, false, false, false, false, false);
     } else {
