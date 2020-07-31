@@ -65,11 +65,11 @@ const persistent_menu = [
         title: '🎲 Chức Năng Kết Nối ❤',
         type: 'nested',
         call_to_actions: [
-          //{
-          //  title: '📝 Thông Tin Của Bạn',
-          //  type: 'postback',
-          //  payload: lang.KEYWORD_GETINFO
-         // },
+          {
+            title: '📝 Thông Tin Của Bạn',
+            type: 'postback',
+            payload: lang.KEYWORD_GETINFO
+          },
           {
             title: '💝 Tâm Sự Cùng Admin 🥰💕',
             type: 'web_url',
