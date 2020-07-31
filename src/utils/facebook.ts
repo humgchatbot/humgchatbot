@@ -35,6 +35,11 @@ const persistent_menu = [
         type: 'nested',
         call_to_actions: [
           {
+            title: '💕 Bắt đầu chat 🤞❤',
+            type: 'postback',
+            payload: lang.KEYWORD_START
+          },
+          {
             title: '🤴 Tìm Nam',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
