@@ -34,11 +34,11 @@ const persistent_menu = [
         title: '💟 Bắt Cá Ao Làng 😘🥰',
         type: 'nested',
         call_to_actions: [
-          {
-            title: '💕 Bắt đầu chat 🤞❤',
-            type: 'postback',
-            payload: lang.KEYWORD_START
-          },
+        //  {
+        //    title: '💕 Bắt đầu chat 🤞❤',
+        //    type: 'postback',
+        //    payload: lang.KEYWORD_START
+        //  },
           {
             title: '🤴 Tìm Nam',
             type: 'postback',
