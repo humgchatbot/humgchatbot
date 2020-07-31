@@ -223,6 +223,7 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
   // fetch person state
   const waitState: boolean = await db.isInWaitRoom(sender);
   const sender2: string | null = await db.findPartnerChatRoom(sender);
+  const data = await fb.getUserData(sender);
 
   if (!waitState && sender2 === null) {
     // neither in chat room nor wait room
@@ -254,7 +255,10 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
       await gifts.sendCatPic(sender, null);
     } else if (command === lang.KEYWORD_DOG) {
       await gifts.sendDogPic(sender, null);
-    } else if (!event.read) {
+    //} else if (!event.read) {
+    } else if (command === lang.KEYWORD_GETINFO ) {
+      await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_STATUS_DISCONNECT , true, false, true, true, false);
+    }else if (!event.read) {
       await fb.sendTextButtons(sender, lang.INSTRUCTION, true, false, true, true, false);
     }
   } else if (waitState && sender2 === null) {
@@ -268,7 +272,10 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
       await gifts.sendCatPic(sender, null);
     } else if (command === lang.KEYWORD_DOG) {
       await gifts.sendDogPic(sender, null);
-    } else if (!event.read) {
+    //} else if (!event.read) {
+    } else if (command === lang.KEYWORD_GETINFO ) {
+      await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_STATUS_DISCONNECT , true, false, true, true, false);
+    }else if (!event.read) {
       await fb.sendTextButtons(sender, lang.WAITING, false, false, true, false, false);
     }
   } else if (!waitState && sender2 !== null) {
@@ -285,6 +292,8 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
     } else if (command === lang.KEYWORD_DOG) {
       await forwardMessage(sender, sender2, event.message);
       await gifts.sendDogPic(sender, sender2);
+    } else if (command === lang.KEYWORD_GETINFO ) {
+      await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_STATUS_CONNECT + lang.GETINFO_ID2 + sender2, false, false, false, false, false);
     } else {
       // FIX-ME: Only send seen indicator for messages before watermark
       if (event.read) {
