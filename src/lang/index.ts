@@ -47,7 +47,7 @@ export default {
 
   KEYWORD_START: '@start',
   KEYWORD_END: '#pp',
-  KEYWORD_GENDER: '#tim',
+  KEYWORD_GENDER: 'tim',
   KEYWORD_GENDER_MALE: 'nam',
   KEYWORD_GENDER_FEMALE: 'nu',
   KEYWORD_GENDER_BOTH: 'namnu',
