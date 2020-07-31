@@ -117,12 +117,12 @@ const quick_buttons_genders: Array<SendQuickReply> = [
 const quick_buttons_generic: Array<SendQuickReply> = [
   {
     content_type: 'text',
-    title: 'Meow',
+    title: 'Xem ảnh Mèo',
     payload: lang.KEYWORD_CAT
   },
   {
     content_type: 'text',
-    title: 'Cunw',
+    title: 'Xem ảnh Cún',
     payload: lang.KEYWORD_DOG
   },
   {
