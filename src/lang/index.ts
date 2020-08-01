@@ -59,7 +59,7 @@ export default {
   KEYWORD_DOG: '#cunw',
   KEYWORD_GETINFO: 'getinfo',
   GETINFO_NAME: '\n🔹 Họ tên: ',
-//  GETINFO_GENDER: '\n🔹 Giới tính: ',
+  GETINFO_GENDER: '\n🔹 Giới tính: ',
   GETINFO_ID: '🔹 ID của bạn là:\n',
   GETINFO_ID2: '\n🔹 ID của Cá là:\n',
   GETINFO_STATUS_CONNECT: '\n🔹 Trạng thái:🆗Đã kết nối.',
