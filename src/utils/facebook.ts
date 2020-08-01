@@ -77,7 +77,7 @@ const persistent_menu = [
         type: 'nested',
         call_to_actions: [
           {
-            title: '📝 Thông Tin Của Bạn',
+            title: '📝 Thông Tin Của Tôi',
             type: 'postback',
             payload: lang.KEYWORD_GETINFO
           },
