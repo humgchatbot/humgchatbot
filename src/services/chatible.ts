@@ -289,7 +289,7 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
     } else if (command === lang.KEYWORD_START ) {
       await fb.sendTextButtons(sender, lang.START_ERR_ALREADY , false, false, false, false, false);
     } else if (command === lang.KEYWORD_GETINFO ) {
-      await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_GENDER + (data.gender== 'male' ? 'Nam 👦' : 'Nữ 👧') + lang.GETINFO_STATUS_DISCONNECT , false, false, false, false, false);
+      await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_GENDER + (data.gender== 'male' ? 'Nam 👦' : 'Nữ 👧') + lang.GETINFO_STATUS_WAIT , false, false, false, false, false);
     }else if (!event.read) {
       await fb.sendTextButtons(sender, lang.WAITING, false, false, true, false, false);
     }
