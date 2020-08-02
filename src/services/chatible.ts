@@ -186,7 +186,7 @@ const forwardMessage = async (sender: string, receiver: string, data: WebhookMes
  * Get infomation ID
  * @param id : id user
  */
-
+/*
 const getInfoUser = async (id: string): Promise<void> => {
   let GETINFO = '';
   const data = fb.getUserData(id);
@@ -214,6 +214,7 @@ const getInfoUser = async (id: string): Promise<void> => {
   await fb.sendTextButtons(id, GETINFO, false, false, true, true, false);
 
 } 
+*/
 
 /**
  * Process messaging event sent by Facebook
