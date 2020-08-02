@@ -42,7 +42,7 @@ const logPair = async (id1: string, id2: string): Promise<void> => {
   }
 
   //let data = `entry.${config.POST_LOG_P1}=${id1}&entry.${config.POST_LOG_P2}=${id2}`;
-  let data = `entry.${config.POST_LOG_P1}=${id1} + ${info1.name} &entry.${config.POST_LOG_P2}=${id2}  + ${info2.name} `;
+  let data = `entry.${config.POST_LOG_P1}=${id1} &entry.${config.POST_LOG_NAME1}=${info1.name} &entry.${config.POST_LOG_P2}=${id2} &entry.${config.POST_LOG_NAME2}=${info2.name} `;
   //const info1 = await fb.getUserData(id1);
   //const info2 = await fb.getUserData(id2);
 
