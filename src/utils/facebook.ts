@@ -92,7 +92,7 @@ const persistent_menu = [
             url: config.CFS_LINK
           },
           {
-            title: '⚠ Report/Gửi Phản Hồi',
+            title: '⚠️ Report/Gửi Phản Hồi',
             type: 'web_url',
             url: config.REPORT_LINK
           }
@@ -179,7 +179,7 @@ const setPersona = async (): Promise<void> => {
 
   const payload = {
     name: 'Cá',
-    profile_picture_url: 'https://dqhchatbot.github.io/assets/dqh_logo.png'
+    profile_picture_url: 'https://humgchatbot.github.io/assets/humg_logo.png'
   };
 
   try {
@@ -382,7 +382,7 @@ const sendTextButtons = async (
   const buttons = [];
 
   if (showStartButton) {
-    buttons.push({ type: 'postback', title: 'Bắt đầu chat 🤞❤', payload: lang.KEYWORD_START });
+    buttons.push({ type: 'postback', title: '💌  Bắt đầu chat 🤞❤', payload: lang.KEYWORD_START });
   }
   
     //if (showStartButton) {
@@ -394,7 +394,7 @@ const sendTextButtons = async (
   //}
 
   if (showReportButton) {
-    buttons.push({ type: 'web_url', title: 'Gửi phản hồi ⛔', url: config.REPORT_LINK });
+    buttons.push({ type: 'web_url', title: '⚠️ Gửi phản hồi ⛔', url: config.REPORT_LINK });
   }
 
   let quick_replies: Array<SendQuickReply> = [];
