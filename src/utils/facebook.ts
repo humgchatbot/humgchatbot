@@ -179,7 +179,7 @@ const setPersona = async (): Promise<void> => {
 
   const payload = {
     name: 'Cá',
-    profile_picture_url: 'https://humgchatbot.github.io/assets/humg_logo.png'
+    profile_picture_url: 'https://dqhchatbot.github.io/assets/dqh_logo.png'
   };
 
   try {
@@ -232,79 +232,6 @@ const setMessengerProfile = async (): Promise<void> => {
     }
   } catch (err) {
     logger.logError('facebook::setMessengerProfile', 'Failed to send request to Facebook', err, true);
-  }
-};
-
-/**
- * Send message to user
- * @param receiver - ID of receiver
- * @param messageData - Message data
- * @param usePersona - Should send with persona
- * @param origSender - ID of original sender (see code for better understanding)
- */
-const sendMessage = async (
-  receiver: string,
-  messageData: SendMessageObject,
-  usePersona: boolean,
-  origSender = ''
-): Promise<void> => {
-  if (messageData.text || messageData.attachment) {
-    if (messageData.text && messageData.text.length > config.MAX_MESSAGE_LENGTH) {
-      if (origSender !== '') {
-        await sendMessage(origSender, { text: lang.ERR_TOO_LONG }, false);
-      }
-      return;
-    }
-
-    const payload: SendRequest = {
-      recipient: { id: receiver },
-      message: messageData,
-      messaging_type: 'MESSAGE_TAG',
-      tag: 'ACCOUNT_UPDATE'
-    };
-
-    if (usePersona && personaID !== '') {
-      payload.persona_id = personaID;
-    }
-
-    try {
-      const res = await phin({
-        url: u(`/me/messages?access_token=${config.PAGE_ACCESS_TOKEN}`),
-        method: 'POST',
-        parse: 'json',
-        data: payload
-      });
-
-      const body: SendResponse = res.body as SendResponse;
-
-      if (body.error && body.error.code) {
-        logger.logError(
-          'facebook::sendMessage',
-          `${origSender === '' ? 'bot' : origSender} to ${receiver} failed`,
-          body
-        );
-
-        const errorCode = body.error.code;
-        if (errorCode === 5) {
-          // do something
-          if (heroku !== null) {
-            await heroku.delete(`/apps/${config.APP_NAME}/dynos`);
-          }
-        } else if (origSender !== '') {
-          if (errorCode === 200 || errorCode === 551) {
-            await sendMessage(origSender, { text: lang.ERR_200 }, false);
-          } else if (errorCode === 10) {
-            await sendMessage(origSender, { text: lang.ERR_10 }, false);
-          }
-        }
-      }
-    } catch (err) {
-      // FIX-ME: sendMessage should retry on timeout. Currently it just logs error and returns.
-      // Timeout happens very rarely, though.
-      logger.logError('facebook::sendMessage', 'Failed to send request to Facebook', err, true);
-    }
-  } else {
-    logger.logError('facebook::sendMessage', 'Got invalid messageData. Skipped!!!', messageData, true);
   }
 };
 
@@ -455,7 +382,7 @@ const sendTextButtons = async (
   const buttons = [];
 
   if (showStartButton) {
-    buttons.push({ type: 'postback', title: '💌 Bắt đầu chat 🤞❤', payload: lang.KEYWORD_START });
+    buttons.push({ type: 'postback', title: 'Bắt đầu chat 🤞❤', payload: lang.KEYWORD_START });
   }
   
     //if (showStartButton) {
@@ -467,7 +394,7 @@ const sendTextButtons = async (
   //}
 
   if (showReportButton) {
-    buttons.push({ type: 'web_url', title: '⚠ Gửi phản hồi ⛔', url: config.REPORT_LINK });
+    buttons.push({ type: 'web_url', title: 'Gửi phản hồi ⛔', url: config.REPORT_LINK });
   }
 
   let quick_replies: Array<SendQuickReply> = [];
