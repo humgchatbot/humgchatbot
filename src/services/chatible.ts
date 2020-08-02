@@ -192,7 +192,7 @@ const getInfoUser = async (id: string): Promise<void> => {
   const data = fb.getUserData(id);
   const waitState: boolean = await db.isInWaitRoom(id);
   const sender2: string | null = await db.findPartnerChatRoom(id);
-  const state: StateEnum | null = await db.getState(id);
+//  const state: StateEnum | null = await db.getState(id);
   const gender: GenderEnum = await getGender(id);
 
   let GETINFO_STATUS = '';
