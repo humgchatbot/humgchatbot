@@ -55,6 +55,7 @@ export interface ConfigProps {
   REPORT_LINK: string;
   TSAD_LINK: string;
   CFS_LINK: string;
+  GROPUP_LINK: string;
   MAX_PEOPLE_IN_WAITROOM: number;
   MAX_WAIT_TIME_MINUTES: number;
   ADMIN_PASSWORD: string;
@@ -103,7 +104,8 @@ export default {
   REPORT_LINK: parseEnvString('REPORT_LINK') || 'docs.google.com/forms/d/e/1FAIpQLScRqbztpcLLkUexkovOaBkuPLnS7vTaq_NCbtlS3etwQy5EtQ/viewform?usp=sf_link ',
   TSAD_LINK: parseEnvString('TSAD_LINK') || 'https://m.me/adschatbot',
   CFS_LINK: parseEnvString('CFS_LINK') || 'docs.google.com/forms/d/e/1FAIpQLScTbMFkbadN3t5y6OHh1IIZ4luqrswqqZOJ3A2YR0JyWnSRWg/viewform?usp=sf_link ',
-
+  GROPUP_LINK: parseEnvString('GROPUP_LINK') || 'facebook.com/groups/humgbotchat/',
+  
   // Maximum number of people in wait room
   MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 20,
 
