@@ -63,6 +63,7 @@ export default {
   KEYWORD_HELP: '#trogiup',
   KEYWORD_CAT: '#meow',
   KEYWORD_DOG: '#cunw',
+  // Get Info
   KEYWORD_GETINFO: 'getinfo',
   GETINFO_NAME: '\n🔹 Họ tên: ',
   GETINFO_GENDER: '\n🔹 Giới tính: ',
