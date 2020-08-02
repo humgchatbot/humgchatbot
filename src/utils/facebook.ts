@@ -86,6 +86,11 @@ const persistent_menu = [
             type: 'web_url',
             url: config.TSAD_LINK
           },
+                    {
+            title: '🏆 Tham Gia Group 💨',
+            type: 'web_url',
+            url: config.GROPUP_LINK
+          },
           {
             title: '💌 Gửi Confession 😘💘',
             type: 'web_url',
