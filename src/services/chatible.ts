@@ -183,6 +183,39 @@ const forwardMessage = async (sender: string, receiver: string, data: WebhookMes
 };
 
 /**
+ * Get infomation ID
+ * @param id : id user
+ */
+
+const getInfoUser = async (id: string): Promise<void> => {
+  let GETINFO = '';
+  const data = fb.getUserData(id);
+  const waitState: boolean = await db.isInWaitRoom(id);
+  const sender2: string | null = await db.findPartnerChatRoom(id);
+  const state: StateEnum | null = await db.getState(id);
+  const gender: GenderEnum = await getGender(id);
+
+  let GETINFO_STATUS = '';
+  if(waitState) GETINFO_STATUS = '💞Đang ở phòng chờ.';
+  else if(sender2) GETINFO_STATUS = '🆗Đã kết nối.\n🔹 ID của Cá là:' + sender2;
+// else if(state === StateEnum.CHATADMIN) GETINFO_STATUS = '🆗Đã kết nối với admin';
+  else GETINFO_STATUS = '❌Chưa kết nối.';
+
+  let GETINFO_GENDER = '';
+  if((await data).gender === 'male') GETINFO_GENDER = 'Nam 👦';
+  else if((await data).gender === 'female') GETINFO_GENDER = 'Nữ 👧';
+  else GETINFO_GENDER = 'Không xác định';
+
+  GETINFO = '🔹 ID của bạn là: ' + id + '\n' +
+	'🔹 Họ tên: ' + (await data).first_name + ' ' + (await data).last_name + '\n' +
+        '🔹 Giới tính: ' + GETINFO_GENDER + '\n' + 
+        '🔹 Trạng thái:' + GETINFO_STATUS;
+  
+  await fb.sendTextButtons(id, GETINFO, false, false, true, true, false);
+
+} 
+
+/**
  * Process messaging event sent by Facebook
  * @param event - Messaging event
  */
@@ -231,6 +264,8 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
   const waitState: boolean = await db.isInWaitRoom(sender);
   const sender2: string | null = await db.findPartnerChatRoom(sender);
   const data = await fb.getUserData(sender);
+  //const sender2: string | null = await db.findPartnerChatRoom(sender);	   
+  //const state: StateEnum | null = await db.getState(sender);
 
   if (!waitState && sender2 === null) {
     // neither in chat room nor wait room
@@ -262,7 +297,9 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
       await gifts.sendCatPic(sender, null);
     } else if (command === lang.KEYWORD_DOG) {
       await gifts.sendDogPic(sender, null);
-    //} else if (!event.read) {
+//    } else if (command === lang.KEYWORD_GETINFO) {
+//      await getInfoUser(sender);
+//    } else if (!event.read) {
     } else if (command === lang.KEYWORD_GETINFO ) {
       await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_GENDER + (data.gender== 'male' ? 'Nam 👦' : 'Nữ 👧') + lang.GETINFO_STATUS_DISCONNECT , true, false, true, true, false);
     }else if (!event.read) {
@@ -279,15 +316,17 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
       await gifts.sendCatPic(sender, null);
     } else if (command === lang.KEYWORD_DOG) {
       await gifts.sendDogPic(sender, null);
-    //} else if (!event.read) {
+//    } else if (command === lang.KEYWORD_GETINFO) {
+//      await getInfoUser(sender);
+//    } else if (!event.read) {
     } else if (command === lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE ) {
-      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_GENDERBOY , false, false, false, false, false);
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_GENDERBOY_WAIT , false, false, false, false, false);
     } else if (command === lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE ) {
-      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_GENDERGIRL , false, false, false, false, false);
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_GENDERGIRL_WAIT , false, false, false, false, false);
     } else if (command === lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH ) {
-      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_BOTH , false, false, false, false, false);
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_BOTH_WAIT , false, false, false, false, false);
     } else if (command === lang.KEYWORD_START ) {
-      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY , false, false, false, false, false);
+      await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_WAIT , false, false, false, false, false);
     } else if (command === lang.KEYWORD_GETINFO ) {
       await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_GENDER + (data.gender== 'male' ? 'Nam 👦' : 'Nữ 👧') + lang.GETINFO_STATUS_WAIT , false, false, false, false, false);
     }else if (!event.read) {
@@ -315,6 +354,8 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
       await fb.sendTextButtons(sender, lang.START_ERR_ALREADY_BOTH , false, false, false, false, false);
     } else if (command === lang.KEYWORD_START ) {
       await fb.sendTextButtons(sender, lang.START_ERR_ALREADY , false, false, false, false, false);
+//    } else if (command === lang.KEYWORD_GETINFO) {
+//      await getInfoUser(sender);
     } else if (command === lang.KEYWORD_GETINFO ) {
       await fb.sendTextButtons(sender, lang.GETINFO_ID + sender + lang.GETINFO_NAME + data.name + lang.GETINFO_GENDER + (data.gender== 'male' ? 'Nam 👦' : 'Nữ 👧') + lang.GETINFO_STATUS_CONNECT + lang.GETINFO_ID2 + sender2, false, false, false, false, false);
     } else {
