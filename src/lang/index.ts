@@ -1,9 +1,9 @@
 export default {
   MAINTENANCE: '[HUMG Chatbot] Server hiện đang bảo trì. Đội ngũ Admin sẽ sớm kết nối lại và thông báo cho các bạn....',
 
-  FIRST_COME: '[HUMG Chatbot] Chào mừng bạn đến với hồ câu cá HUMG-Chatbot 😀. Trước khi bắt đầu, hãy chắc chắn rằng bạn đã chọn đúng giới tính người muốn thả thính. Ấn trợ giúp (hoặc gửi #trogiup) để xem thêm.',
+  FIRST_COME: '[HUMG Chatbot] Chào mừng bạn đến với hồ câu cá HUMG Chatbot 😀. Trước khi bắt đầu, hãy chắc chắn rằng bạn đã chọn đúng giới tính người muốn thả thính. Ấn trợ giúp (hoặc gửi #trogiup) để xem thêm.',
 
-  INSTRUCTION: '[HUMG Chatbot] Gửi @start hoặc bấm vào nút để rải thính tìm cá \n Gõ #trogiup hoặc ấn nút để xem thêm',
+  INSTRUCTION: '[HUMG Chatbot] Gửi "@start" hoặc bấm vào nút để rải thính tìm cá \n Gõ "#trogiup" hoặc ấn nút để xem thêm',
 
   HELP_TXT: '[HUMG Chatbot] Danh sách các lệnh:\n' +
             '- @start: Bắt đầu thả thính tìm Cá\n' +
@@ -44,15 +44,15 @@ export default {
   END_CHAT_PARTNER_WARN: '\nID của Bạn ý là ✅: ',
   END_CHAT_FORCE: '[HUMG Chatbot] Hiện tại không có cá nào đang online cả. Bạn hãy thử lại sau nhé :(',
 
-  ERR_ATTACHMENT: '[HUMG Chatbot] Lỗi: Humgchatbot chưa hỗ trợ gửi dạng dữ liệu này',
+  ERR_ATTACHMENT: '[HUMG Chatbot] Lỗi: Chưa hỗ trợ gửi dạng dữ liệu này',
   ATTACHMENT_LINK: '[HUMG Chatbot] Cá đã gửi 1 đường link: ',
 
   GENDER_ERR: '[HUMG Chatbot]⚠Lỗi: Giới tính nhập vào không hợp lệ!\n\nẤn trợ giúp (hoặc gửi #trogiup) để xem thêm.',
   GENDER_WRITE_OK: '[HUMG Chatbot] Bạn đã chọn giới tính mong muốn tìm được là: ',
   GENDER_WRITE_WARN: '\n\nLưu ý: Tùy chọn này chỉ có tác dụng với PHẦN LỚN các cuộc thả thính.\n🔄Nếu muốn chuyển giới tính thả thính mời bạn gửi #pp rồi tiếp tục.<3',
   GENDER_ARR_UNKNOWN: 'Nam Hoặc Nữ',
-  GENDER_ARR_MALE: 'Nam 🙆‍♂️',
-  GENDER_ARR_FEMALE: 'Nữ 🙆‍♀️',
+  GENDER_ARR_MALE: 'Cá Nam 🙆‍♂️',
+  GENDER_ARR_FEMALE: 'Cá Nữ 🙆‍♀️',
 
   KEYWORD_START: '@start',
   KEYWORD_END: '#pp',
