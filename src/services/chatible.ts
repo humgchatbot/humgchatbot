@@ -103,12 +103,13 @@ const findPair = async (id: string, myGender: GenderEnum): Promise<void> => {
 
     const isPreferredGender =
       (myGender === GenderEnum.UNKNOWN && targetGender === GenderEnum.UNKNOWN) ||
-      (myGender === GenderEnum.MALE && targetGender === GenderEnum.FEMALE) ||
-      (myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE) ||
-      //(myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE);
-      //(myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE) ||
       (myGender === GenderEnum.UNKNOWN && targetGender === GenderEnum.MALE) ||
-      (myGender === GenderEnum.UNKNOWN && targetGender === GenderEnum.FEMALE);
+      (myGender === GenderEnum.UNKNOWN && targetGender === GenderEnum.FEMALE) ||
+      (myGender === GenderEnum.MALE && targetGender === GenderEnum.FEMALE) ||
+      (myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE);
+      //(myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE) ||
+      //(myGender === GenderEnum.UNKNOWN && targetGender === GenderEnum.MALE) ||
+      //(myGender === GenderEnum.UNKNOWN && targetGender === GenderEnum.FEMALE) ||
       //(myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE);
       //(myGender === GenderEnum.MALE && targetGender === GenderEnum.UNKNOWN) ||
       //(myGender === GenderEnum.FEMALE && targetGender === GenderEnum.UNKNOWN) ||
