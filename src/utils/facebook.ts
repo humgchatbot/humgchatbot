@@ -115,17 +115,17 @@ const persistent_menu = [
 const quick_buttons_genders: Array<SendQuickReply> = [
   {
     content_type: 'text',
-    title: '💞Tìm Cá Bất Kì',
+    title: '💞 Tìm Cá Bất Kì',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH
   },
   {
     content_type: 'text',
-    title: '🤴Tìm Cá Nam',
+    title: '🤴 Tìm Cá Nam',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
   },
   {
     content_type: 'text',
-    title: '👸Tìm Cá Nữ',
+    title: '👸 Tìm Cá Nữ',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
   }
 ];
@@ -133,17 +133,17 @@ const quick_buttons_genders: Array<SendQuickReply> = [
 const quick_buttons_generic: Array<SendQuickReply> = [
   {
     content_type: 'text',
-    title: '😺Gưi ảnh Mèo',
+    title: '😺 Gửi ảnh Mèo',
     payload: lang.KEYWORD_CAT
   },
   {
     content_type: 'text',
-    title: '🐶Gửi ảnh Cún',
+    title: '🐶 Gửi ảnh Cún',
     payload: lang.KEYWORD_DOG
   },
   {
     content_type: 'text',
-    title: '💡Trợ Giúp🆘',
+    title: '💡 Trợ Giúp 🆘',
     payload: lang.KEYWORD_HELP
   }
 ];
