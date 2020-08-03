@@ -107,7 +107,7 @@ export default {
   GROPUP_LINK: parseEnvString('GROPUP_LINK') || 'facebook.com/groups/humgbotchat/',
   
   // Maximum number of people in wait room
-  MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 20,
+  MAX_PEOPLE_IN_WAITROOM: parseEnvNumber('MAX_PEOPLE_IN_WAITROOM') || 10,
 
   // Maximum amount of time in wait room
   // 0 for unlimited
