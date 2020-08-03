@@ -104,11 +104,12 @@ const findPair = async (id: string, myGender: GenderEnum): Promise<void> => {
     const isPreferredGender =
       (myGender === GenderEnum.UNKNOWN && targetGender === GenderEnum.UNKNOWN) ||
       (myGender === GenderEnum.MALE && targetGender === GenderEnum.FEMALE) ||
+      (myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE) ||
       //(myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE);
       //(myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE) ||
       (myGender === GenderEnum.UNKNOWN && targetGender === GenderEnum.MALE) ||
-      (myGender === GenderEnum.UNKNOWN && targetGender === GenderEnum.FEMALE) ||
-      (myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE);
+      (myGender === GenderEnum.UNKNOWN && targetGender === GenderEnum.FEMALE);
+      //(myGender === GenderEnum.FEMALE && targetGender === GenderEnum.MALE);
       //(myGender === GenderEnum.MALE && targetGender === GenderEnum.UNKNOWN) ||
       //(myGender === GenderEnum.FEMALE && targetGender === GenderEnum.UNKNOWN) ||
       //(myGender === GenderEnum.FEMALE && targetGender === GenderEnum.FEMALE) ||
@@ -128,9 +129,10 @@ const findPair = async (id: string, myGender: GenderEnum): Promise<void> => {
   await db.writeToWaitRoom(id, myGender);
 
   if (myGender === GenderEnum.UNKNOWN) {
-    await fb.sendTextMessage('', id, lang.START_WARN_GENDER, false);
-  }
+//    await fb.sendTextMessage('', id, lang.START_WARN_GENDER, false);
+//  }
   await fb.sendTextMessage('', id, lang.START_OKAY, false);
+  }
 };
 
 /**
