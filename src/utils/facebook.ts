@@ -40,6 +40,11 @@ const persistent_menu = [
             payload: lang.KEYWORD_START
           },
           {
+            title: '💞 Tìm Cá Bất Kì 💕',
+            type: 'postback',
+            payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH
+          },
+          {
             title: '🤴 Tìm Cá Nam',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
