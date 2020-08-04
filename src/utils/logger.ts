@@ -39,19 +39,20 @@ const logPair = async (id1: string, id2: string): Promise<void> => {
     return;
   }
 
+  let data = `entry.${config.POST_LOG_P1}=${id1}&entry.${config.POST_LOG_P2}=${id2}`;
+  
   const info1 = await fb.getUserData(id1);
   const info2 = await fb.getUserData(id2);
 
+    
   try {
     await phin({
-      url: `https://docs.google.com/forms/d/e/${config.POST_LOG_ID}/formResponse`,
+      url: 'https://docs.google.com/forms/d/e/'+config.POST_LOG_ID+'/formResponse',
       method: 'POST',
-      form: {
-        ['entry.' + config.POST_LOG_P1]: id1,
-        ['entry.' + config.POST_LOG_P2]: id2,
-        ['entry.' + config.POST_LOG_NAME1]: info1.error ? 'error' : info1.name || 'error',
-        ['entry.' + config.POST_LOG_NAME2]: info2.error ? 'error' : info2.name || 'error'
-      }
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data
     });
   } catch (err) {
     logError('logger::logPair', 'Failed to send log to Google Forms', err, true);
@@ -62,3 +63,4 @@ export default {
   logError,
   logPair
 };
+
