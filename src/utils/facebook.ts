@@ -45,7 +45,7 @@ const persistent_menu = [
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH
           },
           {
-            title: '💔 Kết Thúc',
+            title: '💔 Kết Thúc 😔',
             type: 'postback',
             payload: lang.KEYWORD_END
           },
@@ -54,12 +54,12 @@ const persistent_menu = [
            type: 'nested',
           call_to_actions: [
           {
-            title: '🤴 Tìm Cá Nam',
+            title: '🤴 Tìm Cá Nam 👌',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE
           },
           {
-            title: '👸 Tìm Cá Nữ',
+            title: '👸 Tìm Cá Nữ 👌',
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
           },
@@ -70,12 +70,12 @@ const persistent_menu = [
            type: 'nested',
           call_to_actions: [
            {
-              title: '🐱 Gửi ảnh Mèo',
+              title: '🐱 Gửi ảnh Mèo 😻',
               type: 'postback',
               payload: lang.KEYWORD_CAT
             },
             {
-             title: '🐶 Gửi ảnh Cún',
+             title: '🐶 Gửi ảnh Cún 🐶',
              type: 'postback',
               payload: lang.KEYWORD_DOG
             },
