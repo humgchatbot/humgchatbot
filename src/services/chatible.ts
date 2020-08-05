@@ -129,11 +129,11 @@ const findPair = async (id: string, myGender: GenderEnum): Promise<void> => {
   // found no match, put in wait room
   await db.writeToWaitRoom(id, myGender);
 
-  if (myGender === GenderEnum.UNKNOWN) {
+//  if (myGender === GenderEnum.UNKNOWN) {
 //    await fb.sendTextMessage('', id, lang.START_WARN_GENDER, false);
 //  }
   await fb.sendTextMessage('', id, lang.START_OKAY, false);
-  }
+//  }
 };
 
 /**
