@@ -16,7 +16,7 @@ Demo: https://m.me/humgbotchat
 
 ## Tính năng đặc trưng
 
-- Admin dashboard ([code](https://github.com/humgchatbot/humgchatbot.github.io))
+- Admin dashboard ([SourceCode](https://github.com/adhumgchatbot/adhumgchatbot.github.io) or [SourceCode](https://github.com/adminchatbot/adminchatbot.github.io))
 - Ghép cặp theo giới tính (ví dụ: nam với nữ)
 - Gửi hình ảnh chó / mèo dễ thương.
 - Mẫu tin nhắn có thể tùy chỉnh.
