@@ -100,17 +100,23 @@ const persistent_menu = [
                     {
             title: '🏆 Tham Gia Group 💨',
             type: 'web_url',
-            url: config.GROPUP_LINK
+            url: config.GROPUP_LINK,
+            messenger_extensions: false,
+            webview_height_ratio: 'tall'
           },
           {
             title: '💌 Gửi Confession 😘💘',
             type: 'web_url',
-            url: config.CFS_LINK
+            url: config.CFS_LINK,
+            messenger_extensions: false,
+            webview_height_ratio: 'tall'
           },
           {
             title: '⚠️ Report/Gửi Phản Hồi',
             type: 'web_url',
-            url: config.REPORT_LINK
+            url: config.REPORT_LINK,
+            messenger_extensions: false,
+            webview_height_ratio: 'tall'
           }
         ]
       },
@@ -402,15 +408,15 @@ const sendTextButtons = async (
   }
   
     //if (showStartButton) {
-    //buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin 💕', url: config.TSAD_LINK });
+    //buttons.push({ type: 'web_url', title: 'Tâm Sự Cùng Admin 💕', url: config.TSAD_LINK, messenger_extensions: false, webview_height_ratio: 'tall'  });
   //}
   
     //if (showStartButton) {
-    //buttons.push({ type: 'web_url', title: 'Gửi Confessions 😘💘', url: config.CFS_LINK });
+    //buttons.push({ type: 'web_url', title: 'Gửi Confessions 😘💘', url: config.CFS_LINK, messenger_extensions: false, webview_height_ratio: 'tall'  });
   //}
 
   if (showReportButton) {
-    buttons.push({ type: 'web_url', title: '⚠️ Gửi phản hồi ⛔', url: config.REPORT_LINK });
+    buttons.push({ type: 'web_url', title: '⚠️ Gửi phản hồi ⛔', url: config.REPORT_LINK, messenger_extensions: false, webview_height_ratio: 'tall' });
   }
 
   let quick_replies: Array<SendQuickReply> = [];
