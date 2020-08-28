@@ -3,6 +3,8 @@ export interface SendButton {
   url?: string;
   title?: string;
   payload?: string;
+  messenger_extensions?: boolean;
+  webview_height_ratio?: string;
 }
 
 export interface SendAttachmentPayload {
