@@ -44,15 +44,10 @@ const persistent_menu = [
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH
           },
-          {
-            title: '💔 Kết Thúc 😔',
-            type: 'postback',
-            payload: lang.KEYWORD_END
-          },
-           {
+/*           {
           title: '🔎 Tìm Cá Theo Giới Tính 🤴💞👸',
            type: 'nested',
-          call_to_actions: [
+          call_to_actions: [ */
           {
             title: '🤴 Tìm Cá Nam 👌',
             type: 'postback',
@@ -63,8 +58,13 @@ const persistent_menu = [
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
           },
-         ]
-        },
+          {
+            title: '💔 Kết Thúc 😔',
+            type: 'postback',
+            payload: lang.KEYWORD_END
+          },
+ //        ]
+//        },
             {
           title: '📑 Tính Năng 💓',
            type: 'nested',
