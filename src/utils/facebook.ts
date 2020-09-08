@@ -63,6 +63,11 @@ const persistent_menu = [
             type: 'postback',
             payload: lang.KEYWORD_END
           },
+            {
+            title: '💝 Tâm Sự Cùng Admin 🥰💕',
+            type: 'web_url',
+            url: config.TSAD_LINK
+          },
          ]
         },
             {
@@ -92,11 +97,11 @@ const persistent_menu = [
             type: 'postback',
             payload: lang.KEYWORD_GETINFO
           },
-          {
+        /*  {
             title: '💝 Tâm Sự Cùng Admin 🥰💕',
             type: 'web_url',
             url: config.TSAD_LINK
-          },
+          }, */
                     {
             title: '🏆 Tham Gia Group 💨',
             type: 'web_url',
