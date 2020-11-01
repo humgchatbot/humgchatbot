@@ -15,10 +15,10 @@ import phin from 'phin';
  * @param sendToDev - Should notify developer
  */
 const logError = (source: string, message: string, err: unknown = null, sendToDev = false): void => {
-  console.error(`[ERROR - ${source}] ${message}. Details: ${JSON.stringify(err)}`, err);
+  console.error([ERROR - ${source}] ${message}. Details: ${JSON.stringify(err)}, err);
 
   // truncate message if too long
-  message = `[ERROR - ${source}] ${message}`;
+  message = [ERROR - ${source}] ${message};
   if (message.length > config.MAX_MESSAGE_LENGTH) {
     message = message.substr(0, config.MAX_MESSAGE_LENGTH) + '...';
   }
@@ -44,7 +44,7 @@ const logPair = async (id1: string, id2: string): Promise<void> => {
 
   try {
     await phin({
-      url: `https://docs.google.com/forms/d/e/${config.POST_LOG_ID}/formResponse`,
+      url: https://docs.google.com/forms/d/e/${config.POST_LOG_ID}/formResponse,
       method: 'POST',
       form: {
         ['entry.' + config.POST_LOG_P1]: id1,
