@@ -30,7 +30,11 @@ const persistent_menu = [
     locale: 'default',
     composer_input_disabled: false,
     call_to_actions: [
-                {
+      {
+        title: '💟 Hồ Câu Cá 🐟🥰',
+        type: 'nested',
+        call_to_actions: [
+          {
             title: '💕 Thả Câu 🤞❤',
             type: 'postback',
             payload: lang.KEYWORD_START
@@ -40,11 +44,10 @@ const persistent_menu = [
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH
           },
-          {
-            title: '💔 Kết Thúc 😔',
-            type: 'postback',
-            payload: lang.KEYWORD_END
-          },
+           {
+          title: '🔎 Tìm Cá Theo Giới Tính 🤴💞👸',
+           type: 'nested',
+          call_to_actions: [ 
           {
             title: '🤴 Tìm Cá Nam 👌',
             type: 'postback',
@@ -55,6 +58,22 @@ const persistent_menu = [
             type: 'postback',
             payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE
           },
+          {
+            title: '💔 Kết Thúc 😔',
+            type: 'postback',
+            payload: lang.KEYWORD_END
+          },
+            {
+            title: '💝 Tâm Sự Cùng Admin 🥰💕',
+            type: 'web_url',
+            url: config.TSAD_LINK
+          },
+         ]
+        },
+            {
+          title: '📑 Tính Năng 💓',
+           type: 'nested',
+          call_to_actions: [
            {
               title: '🐱 Gửi ảnh Mèo 😻',
               type: 'postback',
@@ -65,16 +84,24 @@ const persistent_menu = [
              type: 'postback',
               payload: lang.KEYWORD_DOG
             },
+            ]
+            },
+       ]
+      },
+      {
+        title: '🎲 Chức Năng Kết Nối ❤',
+        type: 'nested',
+        call_to_actions: [
           {
             title: '📝 Thông Tin Của Tôi',
             type: 'postback',
             payload: lang.KEYWORD_GETINFO
           },
-          {
+        /*  {
             title: '💝 Tâm Sự Cùng Admin 🥰💕',
             type: 'web_url',
             url: config.TSAD_LINK
-          },
+          }, */
                     {
             title: '🏆 Tham Gia Group 💨',
             type: 'web_url',
@@ -95,7 +122,9 @@ const persistent_menu = [
             url: config.REPORT_LINK,
             messenger_extensions: false,
             webview_height_ratio: 'tall'
-          },
+          }
+        ]
+      },
       {
         title: '💡 Trợ Giúp 🆘',
         type: 'postback',
