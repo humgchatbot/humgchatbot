@@ -206,7 +206,7 @@ const setPersona = async (): Promise<void> => {
 
   const payload = {
     name: 'Cá',
-    profile_picture_url: 'https://humgchatbot.github.io/assets/humg_logo.png'
+    profile_picture_url: config.PERSONA_PROFILE_PICTURE
   };
 
   try {
