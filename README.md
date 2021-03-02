@@ -19,11 +19,11 @@ Demo: https://m.me/humgbotchat
 - Admin dashboard ([SourceCode](https://github.com/adhumgchatbot/adhumgchatbot.github.io) or [SourceCode](https://github.com/adminchatbot/adminchatbot.github.io))
 - Ghép cặp theo giới tính (ví dụ: nam với nữ)
 - Gửi hình ảnh chó / mèo dễ thương.
-- Mẫu tin nhắn có thể tùy chỉnh.
+- Mẫu tin nhắn có thể tùy chỉnh trong source code.
 - Cơ sở dữ liệu bộ nhớ cache trong bộ nhớ để tăng hiệu suất.
 - Phát triển với hiệu suất trong tâm trí.
 
-## Tính năng theo kế hoạch
+## Tính năng theo kế hoạch ( Dự Kiến )
 
 - Cho phép chỉnh sửa hồ sơ qua Messenger Webview
 - Giới hạn tỷ lệ yêu cầu được gửi đi để tránh bị chuyển đổi sang trang [MPS Cao](https://developers.facebook.com/docs/messenger-platform/send-messages/high-mps) page
