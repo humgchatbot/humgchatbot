@@ -21,7 +21,6 @@ Demo: https://m.me/humgbotchat
 - Gửi hình ảnh chó / mèo dễ thương.
 - Mẫu tin nhắn có thể tùy chỉnh trong source code.
 - Cơ sở dữ liệu bộ nhớ cache trong bộ nhớ để tăng hiệu suất.
-- Phát triển với hiệu suất trong tâm trí.
 
 ## Tính năng theo kế hoạch ( Dự Kiến )
 
