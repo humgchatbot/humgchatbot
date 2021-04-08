@@ -1,6 +1,4 @@
 /**
- * This project is dedicated to Lam Dao Que Anh, my ex-crush and ex-lover.
- * You made me stronger and better than I could ever imagined.
  * @packageDocumentation
  */
 
